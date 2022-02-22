@@ -30,6 +30,7 @@ body {
   background-repeat: no-repeat;
 }
 
+/* this works differently, not sure which I prefer */
 /* body {
   background-image: url(/imgs/background2-1080x1920.jpg);
   background-size: 100%;
