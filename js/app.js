@@ -56,7 +56,7 @@ getNewQuestion = () => {
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.lenght);
     currentQuestion = availableQuestions[questionIndex];
-    questionCounter.innerText = currentQuestion.question;
+    questionCounter.innerText = currentQuestion.sentence;
 }
 
 startGame()
