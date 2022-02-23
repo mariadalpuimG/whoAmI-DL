@@ -59,6 +59,13 @@ getNewQuestion = () => {
     questionCounter.innerText = currentQuestion.sentence;
 }
 
+// minute 34
+// Uncaught TypeError: Cannot read properties of undefined (reading 'sentence')
+//     at getNewQuestion (app.js:59:49)
+//     at startGame (app.js:52:5)
+//     at app.js:62:1
+// trying to debug why sentence isn't defined
+
 startGame()
 
 
