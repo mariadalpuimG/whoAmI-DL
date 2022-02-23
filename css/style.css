@@ -46,6 +46,12 @@ img {
 
 /* ----------- defaults PAGE 2 QUIZ -----------  */
 
+.choiceContainer:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.49);
+  padding: 1.1rem;
+}
+
 /* ----------- defaults PAGE 3 RESULTS -----------  */
 
 /* ----------- style PAGE 1 LANDING -----------  */
@@ -171,29 +177,64 @@ img {
   font-size: 3rem;
 }
 
+/*spacing between heading and the rest */
 .gameTagQuizPage h3 {
   font-size: 2rem;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
+  margin-bottom: 0rem;
+  padding-bottom: 0rem;
 }
 
+/* don't know where to place it yet. */
 .usernameContainer {
+  display: flex;
   float: right;
+  font-size: 2rem;
 }
 /* ---- style PAGE 2 QUIZ - main ----  */
 
+.sentence {
+  display: flex;
+}
+
+.sentence > * {
+  font-size: 3rem;
+}
+
+.sentence h2 {
+  font-size: 3rem;
+  font-style: italic;
+}
+
+/* not happy with this, check later */
+.questionTag {
+  display: inline-block;
+  position: relative;
+  left: 40%;
+}
+
+.questionTag > * {
+  text-align: left;
+}
+
+.questionTag p {
+}
+
 .choiceContainer {
-  background-color: orange;
+  /* background-color: orange; */
   display: inline-block;
   margin-bottom: 0.5rem;
   font-size: 1.8rem;
 }
 
 .choicePhoto {
-  background-color: red;
 }
 
 /* ---- style PAGE 2 QUIZ - footer ----  */
+.footerQuizPage {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+}
 
 /* ----------- style PAGE 3 RESULTS -----------  */
 /* ---- style PAGE 3 RESULTS - header ----  */
