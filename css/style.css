@@ -156,8 +156,9 @@ img {
 
 .footerLandingPage {
   position: fixed;
-  top: 85vh;
+  /* top: 85vh; */
   right: 20px;
+  bottom: 20px;
 }
 
 /* ----------- style PAGE 2 QUIZ -----------  */
