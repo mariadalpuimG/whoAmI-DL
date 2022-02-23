@@ -22,18 +22,11 @@ img {
   width: 100px;
 }
 
-body {
+/* not sure if I want this in the layout */
+/* body {
   background-image: url(/imgs/background2-1080x1920.jpg);
   background-size: 400px;
   height: 100vh;
-  background-position: right top;
-  background-repeat: no-repeat;
-}
-
-/* this works differently, not sure which I prefer */
-/* body {
-  background-image: url(/imgs/background2-1080x1920.jpg);
-  background-size: 100%;
   background-position: right top;
   background-repeat: no-repeat;
 } */
@@ -41,7 +34,6 @@ body {
 .btn {
   font-size: 1.8rem;
   padding: 1rem;
-  width: 20rem;
   background-color: rgba(250, 174, 39, 255);
   border-radius: 1rem;
 }
@@ -66,19 +58,19 @@ body {
 
 /* ---- style PAGE 1 LANDING - main ----  */
 .landingPageContainer {
-  width: 89vw;
+  width: 97vw;
   height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 10px;
-  padding: 60px 10px;
+  margin-right: auto;
+  margin-left: auto;
   /* background-color: red; */
 }
 
 #home h1 {
   font-size: 2.7rem;
-  padding-top: 120px;
+  padding-top: 60px;
 }
 
 #home p {
@@ -100,17 +92,25 @@ body {
   padding-bottom: 50px;
 }
 
+#btnPlay {
+  padding: 1rem 3rem;
+}
+
+#btnPlay:hover {
+  padding: 1.1rem 3.1rem;
+}
+
 .startBoxContainer {
-  background-color: rgba(250, 174, 39, 0.95);
+  background-color: rgba(250, 174, 39, 1);
   position: absolute;
   margin-top: 500px;
   border-radius: 5px;
-  margin-left: 5rem;
   padding: 25px 35px 15px 35px;
 }
 
 .startFlexContainer {
   width: 60vw;
+  max-width: 500px;
   height: 15vh;
   display: flex;
   flex-wrap: wrap;
@@ -120,7 +120,7 @@ body {
 }
 
 .inputUsername {
-  padding: 0.7rem 2rem;
+  padding: 0.7rem 12%;
   font-size: 1.5rem;
   color: rgba(34, 46, 84, 255);
   border-radius: 5px;
@@ -175,11 +175,12 @@ body {
 /* MOBILE FIRST APPROACH - DESKTOP BELLOW */
 /* ----------- defaults PAGE 1 LANDING -----------  */
 @media screen and (min-width: 801px) {
-  body {
+  /* not sure if I want this in the layout */
+  /* body {
     background-image: url(/imgs/background2-1080x1920.jpg);
     background-size: 500px;
     height: 100vh;
     background-position: right top;
     background-repeat: no-repeat;
-  }
+  } */
 }
