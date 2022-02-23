@@ -1,16 +1,16 @@
 // // open and close rules buttons
 
-// console.log(document.getElementById('rulesContainer'))
+console.log(document.getElementById('playBox'))
 
-// const btnStart = document.getElementById('rulesContainer');
+const btnOpenClose = document.getElementById('playBox');
 
-// openRules = () => {
-//     btnStart.style.display = "block";
-// };
+openBox = () => {
+    btnOpenClose.style.display = "block";
+};
 
-// closeRules = () => {
-//     btnStart.style.display = "none";
-// };
+closeBox = () => {
+    btnOpenClose.style.display = "none";
+};
 
-// document.getElementById('btnStart').addEventListener('click', openRules)
-// document.getElementById('btnClose').addEventListener('click', closeRules)
+document.getElementById('btnPlay').addEventListener('click', openBox)
+document.getElementById('btnClose').addEventListener('click', closeBox)

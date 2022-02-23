@@ -132,7 +132,7 @@ body {
   background-color: rgba(34, 46, 84, 255);
 }
 
-.btnClose {
+#btnClose {
   background-color: rgba(34, 46, 84, 255);
   font-size: 0.8rem;
   width: 2.5rem;
@@ -141,6 +141,10 @@ body {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+.startBoxContainer {
+  display: none;
 }
 
 /* ---- style PAGE 1 LANDING - footer ----  */
