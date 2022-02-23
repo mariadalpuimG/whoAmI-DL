@@ -50,8 +50,7 @@ img {
 
 /* ----------- style PAGE 1 LANDING -----------  */
 /* ---- style PAGE 1 LANDING - header ----  */
-.headLandingPage {
-  width: 12rem;
+.headerLandingPage {
   padding: 10px;
   float: left;
 }
@@ -149,22 +148,33 @@ img {
 
 /* ---- style PAGE 1 LANDING - footer ----  */
 .footerLandingPage h2 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 .footerLandingPage img {
-  width: 60px;
+  width: 70px;
 }
 
 .footerLandingPage {
-  float: right;
-  margin-top: 18.1rem;
-  margin-right: 0.9rem;
-  /* background-color: red; */
+  position: fixed;
+  top: 85vh;
+  right: 20px;
 }
 
 /* ----------- style PAGE 2 QUIZ -----------  */
 /* ---- style PAGE 2 QUIZ - header ----  */
 /* ---- style PAGE 2 QUIZ - main ----  */
+
+.choiceContainer {
+  background-color: orange;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.choicePhoto {
+  background-color: red;
+}
+
 /* ---- style PAGE 2 QUIZ - footer ----  */
 
 /* ----------- style PAGE 3 RESULTS -----------  */
