@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Who am I? - Gearset edition</title>
 </head>
 <body class="bodyLandingPage bodyQuizPage bodyResultsPage">
     <header class="headLandingPage headQuizPage headResultsPage">
-        <img class="logoLandingPage logoQuizPage logoResultsPage" src="/imgs/logo2.png" alt="Gearset logo">
+        <img class="logoLandingPage logoQuizPage logoResultsPage" src="imgs/logo2.png" alt="Gearset logo">
     </header>
     <main>
     <div class="landingPageContainer">
@@ -18,14 +18,24 @@
             <p class="dashBar">_</p>
             <h2>Who am I?</h2> 
             <h3>Gearset edition</h2>    
-            <a href="#" class="btn" id="btnStart">START</a>  
+            <a href="#" class="btn" id="btnPlay">PLAY</a>  
+        </div>
+        <div class="startBoxContainer">
+            <div class="startFlexContainer">
+                <input class="inputUsername" type="text" name="username" id="username" placeholder="choose a username">
+                <a id="btnStart" class="btn" href="html/quiz.html">START</a>
+                <!-- <a class="btn" href="html/quiz.html">SCORES</a> -->
+            </div>
+            <div>
+                <button class="btn btnClose" id="btnClose">X</button>
+            </div>
         </div>
     </div>
     </main>
     <footer class="footerLandingPage footerQuizPage footerResultsPage">
         <h2>created by</h2>
-        <img src="/imgs/photos/maria-rounded.png" alt="creator picutre: Maria">
+        <img src="imgs/photos/maria-rounded.png" alt="creator picutre: Maria">
     </footer>
-    <script async src="/js/app.js"></script>
+    <script async src="js/app.js"></script>
 </body>
 </html>
