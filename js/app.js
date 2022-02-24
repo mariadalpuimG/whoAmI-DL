@@ -11,7 +11,7 @@ let currentQuestion = {};
 let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
-let availableQuestions = []
+let availableQuestions = [];
 
 // I want to replace this with a data file
 // check if the answer number is zero based
@@ -37,7 +37,7 @@ let questions = [
         choice3: "Richard Owen",
         answer: 3
     }
-]
+];
 
 const CORRECT_POINTS = 10;
 // only doing this if I have many questions
@@ -48,23 +48,20 @@ startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
-    console.log(availableQuestions)
+    // console.log(availableQuestions.length)
+    // console.log(availableQuestions)
     getNewQuestion();
 };
 
 getNewQuestion = () => {
     questionCounter++;
-    const questionIndex = Math.floor(Math.random() * availableQuestions.lenght);
+    // gets a random number and transforms it in an integer
+    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
-    questionCounter.innerText = currentQuestion.sentence;
-}
+    sentence.innerText = currentQuestion.sentence;
 
-// minute 34
-// Uncaught TypeError: Cannot read properties of undefined (reading 'sentence')
-//     at getNewQuestion (app.js:59:49)
-//     at startGame (app.js:52:5)
-//     at app.js:62:1
-// trying to debug why sentence isn't defined
+};
+
 
 startGame()
 
