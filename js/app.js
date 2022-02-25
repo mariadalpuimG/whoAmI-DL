@@ -8,7 +8,8 @@ console.log(choicePhoto)
 console.log(choiceName)
 
 let currentQuestion = {};
-let acceptingAnswers = true;
+// don't want to accept answers until we have the question run
+let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
@@ -16,6 +17,16 @@ let availableQuestions = [];
 // I want to replace this with a data file
 // check if the answer number is zero based
 let questions = [
+    // {
+    //     sentence: `"I am not good at reading instructions."`,
+    //     choicePhoto1: "../imgs/photos/jack-rounded.png",
+    //     choiceName1: "Jack Weatherly",
+    //     choicePhoto2: "../imgs/photos/katharine-rounded.png",
+    //     choiceName2: "Katharine Darbishire",
+    //     choicePhoto2: "../imgs/photos/jonathan-rounded.png",
+    //     choiceName3: "Jonathan Plumridge",
+    //     answer: 1
+    // },
     {
         sentence: `"I am not good at reading instructions."`,
         choice1: "Jack Weatherly",
@@ -47,20 +58,49 @@ const CORRECT_POINTS = 10;
 startGame = () => {
     questionCounter = 0;
     score = 0;
+    // this copies all the questions from the array with a spread operator
+    // this does pick each of this objects and put them in an array
     availableQuestions = [...questions];
     // console.log(availableQuestions.length)
-    // console.log(availableQuestions)
+    console.log(availableQuestions)
     getNewQuestion();
 };
 
 getNewQuestion = () => {
     questionCounter++;
-    // gets a random number and transforms it in an integer
+    // gets a random integer number between 0 and number of questions (length)
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+    // assigns to currentquestion a random (questionIndex) availablequestion 
     currentQuestion = availableQuestions[questionIndex];
     sentence.innerText = currentQuestion.sentence;
 
+    // for each choice choicePhoto, iterate through it, get a reference
+    // each choice and inside it we get a number (from the data set property we set)
+    // that willl refer to each choice for the question
+    choiceName.forEach(choiceName => {
+        const numberName = choiceName.dataset['number'];
+        // for the choice we are at, replace it's text with the current choice number
+        // for that current question
+        choiceName.innerText = currentQuestion['choice' + numberName];
+        
+    });
+
+    // choicePhoto.forEach(choicePhoto => {
+    //     const numberPhoto = choicePhoto.dataset['number'];
+    //     // for the choice we are at, replace it's text with the current choice number
+    //     // for that current question
+    //     console.log(choicePhoto.src)
+    //     choicePhoto.src = `${currentQuestion['choice' + numberPhoto]}`;
+    //     // document.getElementById("").src = "hackanm.gif";
+    // });
+
+    // Remove 1 element before question in questionIndex
+    // takes out from available the question just used
+    availableQuestions.splice(questionIndex, 1);
+
+    acceptingAnswers = true;
 };
+
 
 
 startGame()
