@@ -1,3 +1,23 @@
+// // open and close rules buttons in main page
+console.log(document.getElementById('playBox'));
+
+const btnOpenClose = document.getElementById('playBox');
+
+openBox = () => {
+    btnOpenClose.style.display = "block";
+};
+
+closeBox = () => {
+    btnOpenClose.style.display = "none";
+};
+
+// adding Optional chaining so it doesn't fail when on next page
+document.getElementById('btnPlay')?.addEventListener('click', openBox)
+document.getElementById('btnClose')?.addEventListener('click', closeBox)
+
+
+
+// quiz page
 console.log(document.getElementById('sentenceQuote'))
 
 const sentence = document.getElementById('sentenceQuote');
@@ -102,24 +122,6 @@ getNewQuestion = () => {
     acceptingAnswers = true;
 };
 
-
-
 startGame()
 
-
-// // open and close rules buttons
-console.log(document.getElementById('playBox'));
-
-const btnOpenClose = document.getElementById('playBox');
-
-openBox = () => {
-    btnOpenClose.style.display = "block";
-};
-
-closeBox = () => {
-    btnOpenClose.style.display = "none";
-};
-
-document.getElementById('btnPlay').addEventListener('click', openBox)
-document.getElementById('btnClose').addEventListener('click', closeBox)
 
