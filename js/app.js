@@ -1,3 +1,4 @@
+console.log(document.getElementById('sentenceQuote'))
 
 const sentence = document.getElementById('sentenceQuote');
 const choicePhoto = Array.from(document.getElementsByClassName('choicePhoto'));
@@ -107,7 +108,7 @@ startGame()
 
 
 // // open and close rules buttons
-console.log(document.getElementById('playBox'))
+console.log(document.getElementById('playBox'));
 
 const btnOpenClose = document.getElementById('playBox');
 
