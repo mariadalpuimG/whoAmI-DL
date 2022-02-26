@@ -16,6 +16,23 @@ document.getElementById('btnPlay')?.addEventListener('click', openBox)
 document.getElementById('btnClose')?.addEventListener('click', closeBox)
 
 
+//start only available when submit
+let storedUsername;
+submitUsername = (e) => {
+    storedUsername = {
+    username: document.querySelector("#username").value,
+  };
+
+  console.log(storedUsername);
+
+  storedUsername = JSON.stringify(storedUsername);
+  //Set the value of the specified local storage item
+  sessionStorage.setItem("SessionUsername", storedUsername);
+  console.log(sessionStorage.getItem("SessionUsername"));
+  e.preventDefault();
+};
+
+document.querySelector("form")?.addEventListener("submit", submitUsername);
 
 
 

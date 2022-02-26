@@ -132,6 +132,13 @@ img {
   border: none;
 }
 
+#btnSubmit {
+  font-size: 11px;
+  width: 7rem;
+  background-color: rgba(34, 46, 84, 255);
+  border: none;
+}
+
 #btnStart {
   width: 10rem;
   background-color: rgba(34, 46, 84, 255);
