@@ -195,16 +195,27 @@ img {
 .usernameContainer {
   display: flex;
   float: right;
-  font-size: 2rem;
+  font-size: 1.7rem;
+  margin-top: 4rem;
+  margin-right: 2rem;
 }
+
+#player {
+  color: rgba(250, 174, 39, 255);
+  margin-right: 1rem;
+}
+
 /* ---- style PAGE 2 QUIZ - main ----  */
 
 .sentence {
   display: flex;
+  margin: 5rem 2rem 0rem 3rem;
 }
 
 .sentence > * {
   font-size: 3rem;
+  text-align: left;
+  color: rgba(250, 174, 39, 255);
 }
 
 .sentence h2 {
@@ -216,19 +227,22 @@ img {
 .questionTag {
   display: inline-block;
   position: relative;
-  left: 40%;
+  left: 35%;
 }
 
 .questionTag > * {
   text-align: left;
+  font-size: 18px;
 }
 
 .questionTag p {
+  color: rgba(250, 174, 39, 255);
 }
 
 .choiceContainer {
   /* background-color: orange; */
   display: inline-block;
+  margin-top: 5rem;
   margin-bottom: 0.5rem;
   font-size: 1.8rem;
 }
@@ -246,6 +260,11 @@ img {
 /* ----------- style PAGE 3 RESULTS -----------  */
 /* ---- style PAGE 3 RESULTS - header ----  */
 /* ---- style PAGE 3 RESULTS - main ----  */
+
+#results {
+  font-size: 4rem;
+  color: orange;
+}
 /* ---- style PAGE 3 RESULTS - footer ----  */
 
 /* MOBILE FIRST APPROACH - DESKTOP BELLOW */
