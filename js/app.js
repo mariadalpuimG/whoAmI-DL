@@ -17,10 +17,14 @@ document.getElementById('btnClose')?.addEventListener('click', closeBox)
 
 
 
+
+
+
 // quiz page
 console.log(document.getElementById('sentenceQuote'))
 
 const sentence = document.getElementById('sentenceQuote');
+const sentenceNum = document.getElementById('sentenceNumber');
 const choicePhoto = Array.from(document.getElementsByClassName('choicePhoto'));
 const choiceName = Array.from(document.getElementsByClassName('choiceName'));
 
@@ -38,37 +42,36 @@ let availableQuestions = [];
 // I want to replace this with a data file
 // check if the answer number is zero based
 let questions = [
-    // {
-    //     sentence: `"I am not good at reading instructions."`,
-    //     choicePhoto1: "../imgs/photos/jack-rounded.png",
-    //     choiceName1: "Jack Weatherly",
-    //     choicePhoto2: "../imgs/photos/katharine-rounded.png",
-    //     choiceName2: "Katharine Darbishire",
-    //     choicePhoto2: "../imgs/photos/jonathan-rounded.png",
-    //     choiceName3: "Jonathan Plumridge",
-    //     answer: 1
-    // },
     {
         sentence: `"I am not good at reading instructions."`,
-        choice1: "Jack Weatherly",
-        choice2: "Katharine Darbishire",
-        choice3: "Jonathan Plumridge",
+        choicePhoto1: "../imgs/photos/jack-rounded.png",
+        choiceName1: "Jack Weatherly",
+        choicePhoto2: "../imgs/photos/katharine-rounded.png",
+        choiceName2: "Katharine Darbishire",
+        choicePhoto3: "../imgs/photos/jonathan-rounded.png",
+        choiceName3: "Jonathan Plumridge",
         answer: 1
     },
     {
-        sentence: `"The “most royal” person that was in touching distance of me was Queen Beatrix of the Netherlands.`,
-        choice1: "Sarah D.",
-        choice2: "Valerio Chang",
-        choice3: "Holly White",
+        sentence: `"The “most royal” person that was in touching distance of me was Queen Beatrix of the Netherlands."`,
+        choicePhoto1: "../imgs/photos/sarah-rounded.png",
+        choiceName1: "Sarah D.",
+        choicePhoto2: "../imgs/photos/valerio-rounded.png",
+        choiceName2: "Valerio Chang",
+        choicePhoto3: "../imgs/photos/holly-w-rounded.png",
+        choiceName3: "Holly White",
         answer: 2
     },
     {
-        sentence: `" I have performed a piano concerto at West Road Concert Hall in Cambridge.`,
-        choice1: "Someone",
-        choice2: "Someone",
-        choice3: "Richard Owen",
+        sentence: `"I have performed a piano concerto at West Road Concert Hall in Cambridge."`,
+        choicePhoto1: "../imgs/photos/Tom-A-rounded.png",
+        choiceName1: "Tom A.",
+        choicePhoto2: "../imgs/photos/matt-j-rounded.png",
+        choiceName2: "Matt J.",
+        choicePhoto3: "../imgs/photos/richard-o-rounded.png",
+        choiceName3: "Richard Owen",
         answer: 3
-    }
+    },
 ];
 
 const CORRECT_POINTS = 10;
@@ -95,25 +98,26 @@ getNewQuestion = () => {
     currentQuestion = availableQuestions[questionIndex];
     sentence.innerText = currentQuestion.sentence;
 
+    // adds a number based on the questionCounter
+    sentenceNum.innerText = `#${questionCounter}`;
+
     // for each choice choicePhoto, iterate through it, get a reference
     // each choice and inside it we get a number (from the data set property we set)
     // that willl refer to each choice for the question
+    
     choiceName.forEach(choiceName => {
         const numberName = choiceName.dataset['number'];
         // for the choice we are at, replace it's text with the current choice number
         // for that current question
-        choiceName.innerText = currentQuestion['choice' + numberName];
-        
+        choiceName.innerText = currentQuestion['choiceName' + numberName];
     });
 
-    // choicePhoto.forEach(choicePhoto => {
-    //     const numberPhoto = choicePhoto.dataset['number'];
-    //     // for the choice we are at, replace it's text with the current choice number
-    //     // for that current question
-    //     console.log(choicePhoto.src)
-    //     choicePhoto.src = `${currentQuestion['choice' + numberPhoto]}`;
-    //     // document.getElementById("").src = "hackanm.gif";
-    // });
+    console.log(choicePhoto)
+    choicePhoto.forEach(choicePhoto => {
+        const numberPhoto = choicePhoto.dataset['number'];
+        console.log(choicePhoto.src)
+        choicePhoto.src = currentQuestion['choicePhoto' + numberPhoto];
+    });
 
     // Remove 1 element before question in questionIndex
     // takes out from available the question just used
