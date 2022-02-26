@@ -46,7 +46,7 @@ let availableQuestions = [];
 let questions = [
     {
         sentence: `"I am not good at reading instructions."`,
-        choicePhoto1: "./imgs/Gearset-logo-promo.jpg",
+        choicePhoto1: "./imgs/photos/jack-rounded.png",
         choiceName1: "Jack Weatherly",
         choicePhoto2: "./imgs/photos/katharine-rounded.png",
         choiceName2: "Katharine Darbishire",
