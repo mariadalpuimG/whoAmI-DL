@@ -27,6 +27,8 @@ const sentence = document.getElementById('sentenceQuote');
 const sentenceNum = document.getElementById('sentenceNumber');
 const choicePhoto = Array.from(document.getElementsByClassName('choicePhoto'));
 const choiceName = Array.from(document.getElementsByClassName('choiceName'));
+const choiceContainer = Array.from(document.getElementsByClassName('choiceContainer'));
+
 
 console.log(sentence)
 console.log(choicePhoto)
@@ -91,6 +93,12 @@ startGame = () => {
 };
 
 getNewQuestion = () => {
+// first if only if I want to add a limit of max questions
+    // if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS)
+    // this if checks if there's still available questions
+    if(availableQuestions.length === 0) {
+        return window.location.assign("/results.html");
+    }
     questionCounter++;
     // gets a random integer number between 0 and number of questions (length)
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
@@ -124,7 +132,32 @@ getNewQuestion = () => {
     availableQuestions.splice(questionIndex, 1);
 
     acceptingAnswers = true;
+
 };
+
+choiceContainer.forEach(choiceContainer => {
+    choiceContainer?.addEventListener('click', e => {
+        // The target event property returns the element that triggered the event
+        console.log(e.target);
+        // if not readdy to accept, we will ignore it
+        // I might want to change after to return a message
+        if(!acceptingAnswers) return;
+
+        acceptingAnswers = false; 
+        // checks what was clicked choiceContainer
+        // selection either on photo or name, have the same
+        // dataset number, attributes the number in data set to
+        //selected answer
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset["number"];
+        console.log(selectedChoice)
+        console.log(selectedAnswer)
+
+        // after I want to add an option to confirm before continue
+        getNewQuestion();
+
+    });
+});
 
 startGame()
 
