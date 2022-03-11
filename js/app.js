@@ -77,8 +77,8 @@ let questions = [
         choiceName1: "Sarah D.",
         choicePhoto2: "./imgs/photos/valerio-rounded.png",
         choiceName2: "Valerio Chang",
-        choicePhoto3: "./imgs/photos/holly-w-rounded.png",
-        choiceName3: "Holly White",
+        choicePhoto3: "./imgs/photos/jaanki-rounded.png",
+        choiceName3: "Jaanki Vaghela",
         answer: 2
     },
     {
@@ -152,6 +152,14 @@ getNewQuestion = () => {
 
 };
 
+// choiceContainer.forEach(choice => {
+//     choiceContainer?.addEventListener("click", e => {
+//         console.log(e.target);
+
+//         if(!acceptingAnswers) return;
+//     });
+// });
+
 choiceContainer.forEach(choiceContainer => {
     choiceContainer?.addEventListener('click', e => {
         // The target event property returns the element that triggered the event
@@ -166,13 +174,41 @@ choiceContainer.forEach(choiceContainer => {
         // dataset number, attributes the number in data set to
         //selected answer
         const selectedChoice = e.target;
+
         const selectedAnswer = selectedChoice.dataset["number"];
-        console.log(selectedChoice)
+
         console.log(selectedAnswer)
 
-        // after I want to add an option to confirm before continue
-        getNewQuestion();
+        // detect if the answer selected is correct answer
+        // by checking if the selected answer (with event listener) has the same 
+        // dataset number as the currentQuestion and value answer (correct one).
+        // we can't use === because we are pulling a string
+        console.log(selectedAnswer == currentQuestion.answer);
+        console.log(selectedChoice)
 
+        // new variable to apply a result
+        // class starts incorrect by default, but if clicked correct it 
+        // changes the variable value to correct
+        let classToApply = 'incorrect';
+        if (selectedAnswer == currentQuestion.answer) {
+            classToApply = 'correct';
+        };
+        // alternative method to write the same function
+//         const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+
+// apply a class to an element, in this case apply a class
+// to the parent of selected choice (whole container). This creates 
+// classes and there's styling for those 2 classes (red and green)
+        selectedChoice.parentElement.classList.add(classToApply);
+        // but this will keep them assigned, we need to remove. but remove
+        // is also permanent. we need a timeout to decide when removes (how
+        // long to be delayed). And we will also do the same for getting a new answer.
+        // to get a stop before it moves forward.
+        setTimeout( () => {
+            selectedChoice.parentElement.classList.remove(classToApply);
+ // after I want to add an option to confirm before continue
+        getNewQuestion();
+        }, 1000);
     });
 });
 

@@ -1,0 +1,117 @@
+// [
+//     {
+//       "_id": 1,
+//       "title": "Trish - Redhead Lady",
+//       "image": "./images/Avatar-01.png"
+//     },
+//     {
+//       "_id": 2,
+//       "title": "Alan - Bearded Man",
+//       "image": "./images/Avatar-02.png"
+//     },
+//     {
+//       "_id": 3,
+//       "title": "Gandalf - Wizard",
+//       "image": "./images/Avatar-03.png"
+//     }
+//   ]
+  
+
+//   [
+//     {
+//         "userId": 1,
+//         "firstName": "Krish",
+//         "lastName": "Lee",
+//         "phoneNumber": "123456",
+//         "emailAddress": "krish.lee@learningcontainer.com"
+//       },
+//       {
+//         "userId": 2,
+//         "firstName": "racks",
+//         "lastName": "jacson",
+//         "phoneNumber": "123456",
+//         "emailAddress": "racks.jacson@learningcontainer.com"
+//       },
+//       {
+//         "userId": 3,
+//         "firstName": "denial",
+//         "lastName": "roast",
+//         "phoneNumber": "33333333",
+//         "emailAddress": "denial.roast@learningcontainer.com"
+//       },
+//       {
+//         "userId": 4,
+//         "firstName": "devid",
+//         "lastName": "neo",
+//         "phoneNumber": "222222222",
+//         "emailAddress": "devid.neo@learningcontainer.com"
+//       },
+//       {
+//         "userId": 5,
+//         "firstName": "jone",
+//         "lastName": "mac",
+//         "phoneNumber": "111111111",
+//         "emailAddress": "jone.mac@learningcontainer.com"
+//       }
+//     ]
+
+
+// potentially:
+//     func1 = (data) => {
+//         document.querySelector("p").innerHTML = data[1].firstName;
+//         console.log(data);
+//       };
+      
+//       fetch("../_data/Data13-ClassExample.json")
+//         .then((res) => res.json())
+//         .then((data) => func1(data));
+
+
+
+
+
+// another potentially
+// let projectData;
+
+// fetch('https://jsonplaceholder.typicode.com/albums/')
+//   .then((res) => res.json())
+//   .then((data) => (projectData = data))
+//   .then(() => {
+//     console.log(projectData);
+//     for (let i = 0; i < projectData.length; i ++) {
+//       let page = `#page${i + 1}`
+//       console.log(page)
+//       document.querySelector(page).innerHTML = `
+//       <h1>This is text ${i + 1}</h1><h1>${projectData[0].title}</h1>
+//       `
+//     }
+//   });
+//   // <img src="${projectData[i].image}"/>
+
+// btnFunc1 = () => {
+// // console.log('btn one')
+// document.querySelector('#page1').style.display = 'flex';
+// document.querySelector('#page2').style.display = 'none';
+// document.querySelector('#page3').style.display = 'none';
+// }
+
+// btnFunc2 = () => {
+//   // console.log('btn two')
+//   document.querySelector('#page1').style.display = 'none';
+//   document.querySelector('#page2').style.display = 'flex';
+//   document.querySelector('#page3').style.display = 'none';
+// }
+
+// btnFunc3 = () => {
+//   // console.log('btn three')
+//   document.querySelector('#page1').style.display = 'none';
+//   document.querySelector('#page2').style.display = 'none';
+//   document.querySelector('#page3').style.display = 'flex';
+// }
+
+
+// document.querySelector('#btn1').addEventListener('click', btnFunc1) 
+// document.querySelector('#btn2').addEventListener('click', btnFunc2) 
+// document.querySelector('#btn3').addEventListener('click', btnFunc3) 
+
+// btnFunc1();

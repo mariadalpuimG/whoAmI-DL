@@ -250,6 +250,14 @@ img {
 .choicePhoto {
 }
 
+.correct {
+  background-color: green;
+}
+
+.incorrect {
+  background-color: red;
+}
+
 /* ---- style PAGE 2 QUIZ - footer ----  */
 .footerQuizPage {
   position: fixed;
