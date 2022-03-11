@@ -208,10 +208,10 @@ choiceContainer.forEach(choiceContainer => {
             selectedChoice.parentElement.classList.remove(classToApply);
  // after I want to add an option to confirm before continue
         getNewQuestion();
-        }, 1000);
+        }, 10000);
     });
 });
 
 startGame()
 
-
+// heads display - information about the game that we care. question we are at and 

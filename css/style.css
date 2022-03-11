@@ -192,17 +192,25 @@ img {
 }
 
 /* don't know where to place it yet. */
-.usernameContainer {
+.headsDisplay {
   display: flex;
+  /* flex-direction: column; */
   float: right;
   font-size: 1.7rem;
-  margin-top: 4rem;
+  margin-top: 1rem;
   margin-right: 2rem;
+  /* background-color: red; */
 }
 
-#player {
+.headsDisplayTitle {
   color: rgba(250, 174, 39, 255);
   margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.headsDisplayText {
+  margin-right: 1rem;
+  font-size: 2.5rem;
 }
 
 /* ---- style PAGE 2 QUIZ - main ----  */
