@@ -295,10 +295,19 @@ img {
 /* ---- style PAGE 3 RESULTS - header ----  */
 /* ---- style PAGE 3 RESULTS - main ----  */
 
+.resultsContainer {
+  background-color: rgba(250, 174, 39, 1);
+  position: absolute;
+  margin-top: 500px;
+  border-radius: 5px;
+  padding: 25px 35px 15px 35px;
+}
+
 #results {
   font-size: 4rem;
   color: orange;
 }
+
 /* ---- style PAGE 3 RESULTS - footer ----  */
 
 /* MOBILE FIRST APPROACH - DESKTOP BELLOW */
