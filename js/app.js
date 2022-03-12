@@ -67,7 +67,7 @@ let questions = [
     {
         sentence: `"I am not good at reading instructions."`,
         choicePhoto1: "./imgs/photos/jack-rounded.png",
-        choiceName1: "Jack Weatherly",
+        choiceName1: "Jack W.",
         choicePhoto2: "./imgs/photos/katharine-rounded.png",
         choiceName2: "Katharine",
         choicePhoto3: "./imgs/photos/jonathan-rounded.png",
@@ -95,13 +95,103 @@ let questions = [
         answer: 3
     },
     {
-        sentence: `"Qualified Expedition Leader in Amazon Rainforest 😎 (although it is expired now)"`,
+        sentence: `"I am a qualified Expedition Leader in Amazon Rainforest 😎 (it is expired now)"`,
         choicePhoto1: "./imgs/photos/Benny-Mansfield-rounded.png",
-        choiceName1: "Benny M.",
+        choiceName1: "Benny",
         choicePhoto2: "./imgs/photos/matt-rounded.png",
         choiceName2: "Matt D.",
         choicePhoto3: "./imgs/photos/aimee-rounded.png",
         choiceName3: "Aimee",
+        answer: 1
+    },
+    {
+        sentence: `"I once piloted a Royal Navy Frigate along the Essex and Suffolk coast."`,
+        choicePhoto1: "./imgs/photos/hannah-rounded.png",
+        choiceName1: "Hannah",
+        choicePhoto2: "./imgs/photos/ian-e-rounded.png",
+        choiceName2: "Ian E.",
+        choicePhoto3: "./imgs/photos/james-p-rounded.png",
+        choiceName3: "James",
+        answer: 2
+    },
+    {
+        sentence: `"I went on a blind date and have an article on The Guardian about it. Hint: My hair grew a lot since."`,
+        choicePhoto1: "./imgs/photos/toby-rounded.png",
+        choiceName1: "Toby",
+        choicePhoto2: "./imgs/photos/Joe-s-rounded.png",
+        choiceName2: "Joe S.",
+        choicePhoto3: "./imgs/photos/jaime-rounded.png",
+        choiceName3: "Jaime",
+        answer: 3
+    },
+    {
+        sentence: `"My Dads ex Wife's New Husband's Dog was Pickles, the dog who found the world cup."`,
+        choicePhoto1: "./imgs/photos/ben-rounded.png",
+        choiceName1: "Ben T.",
+        choicePhoto2: "./imgs/photos/thomas-giffin-round.png",
+        choiceName2: "Thomas G.",
+        choicePhoto3: "./imgs/photos/dan-y-rounded.png",
+        choiceName3: "Dan Y.",
+        answer: 1
+    },
+    {
+        sentence: `"I've played both Macduff in Macbeth and Tracy in Hairspray on stage."`,
+        choicePhoto1: "./imgs/photos/nicole-rounded (1).png",
+        choiceName1: "Nicole F.",
+        choicePhoto2: "./imgs/photos/valerie-rounded.png",
+        choiceName2: "Valerie",
+        choicePhoto3: "./imgs/photos/sian-rounded.png",
+        choiceName3: "Sian",
+        answer: 2
+    },
+    {
+        sentence: `"I lived for nearly an year in the Dominican Republic during and because of the pandemic,... also I come back married."`,
+        choicePhoto1: "./imgs/photos/spencer-rounded.png",
+        choiceName1: "Spencer",
+        choicePhoto2: "./imgs/photos/nicola-sd-rounded.png",
+        choiceName2: "Nicola",
+        choicePhoto3: "./imgs/photos/maria-rounded.png",
+        choiceName3: "Maria",
+        answer: 3
+    },
+    {
+        sentence: `"I have lived in different 5 countries"`,
+        choicePhoto1: "./imgs/photos/ben-s-rounded.png",
+        choiceName1: "Ben S.",
+        choicePhoto2: "./imgs/photos/tatsiana-rounded.png",
+        choiceName2: "Tatsiana",
+        choicePhoto3: "./imgs/photos/maria-rounded.png",
+        choiceName3: "Maria",
+        answer: 1
+    },
+    {
+        sentence: `"I can juggle 5 balls 🤹"`,
+        choicePhoto1: "./imgs/photos/ryan-rounded.png",
+        choiceName1: "Ryan",
+        choicePhoto2: "./imgs/photos/gwilym-rounded.png",
+        choiceName2: "Gwilym",
+        choicePhoto3: "./imgs/photos/kevin-rounded.png",
+        choiceName3: "Kevin",
+        answer: 2
+    },
+    {
+        sentence: `"I once passed out in a full Pudsey Bear costume at an official event celebrating Children in Need..."`,
+        choicePhoto1: "./imgs/photos/meg-rounded.png",
+        choiceName1: "Meg",
+        choicePhoto2: "./imgs/photos/stephen-rounded.png",
+        choiceName2: "Stephen C.",
+        choicePhoto3: "./imgs/photos/holly-w-rounded.png",
+        choiceName3: "Holly W.",
+        answer: 3
+    },
+    {
+        sentence: `"I once had dinner with George Clooney."`,
+        choicePhoto1: "./imgs/photos/Luke-h-rounded.png",
+        choiceName1: "Luke H.",
+        choicePhoto2: "./imgs/photos/ben-r-rounded.png",
+        choiceName2: "Ben R.",
+        choicePhoto3: "./imgs/photos/casey-rounded.png",
+        choiceName3: "Casey",
         answer: 1
     },
 ];
@@ -233,7 +323,7 @@ choiceContainer.forEach(choiceContainer => {
             selectedChoice.parentElement.classList.remove(classToApply);
  // after I want to add an option to confirm before continue
         getNewQuestion();
-        }, 1000);
+        }, 500);
     });
 });
 
@@ -244,3 +334,7 @@ incrementScore = num => {
 };
 
 startGame();
+
+
+// ------- results page
+

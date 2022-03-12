@@ -295,17 +295,51 @@ img {
 /* ---- style PAGE 3 RESULTS - header ----  */
 /* ---- style PAGE 3 RESULTS - main ----  */
 
+.gameTagResults {
+  background-color: red;
+}
+
+.landingPageResultsContainer {
+  /* width: 97vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto; */
+  background-color: white;
+}
+
+.gameTag h1 {
+  font-size: 2.7rem;
+  padding-top: 60px;
+}
+
+.gameTag p {
+  font-size: 5rem;
+  margin-bottom: 5rem;
+  font-weight: bold;
+  color: rgba(250, 174, 39, 255);
+}
+
+.gameTag h2 {
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.gameTag h3 {
+  font-size: 4rem;
+  margin-bottom: 5rem;
+  color: rgba(250, 174, 39, 255);
+  padding-bottom: 50px;
+}
+
 .resultsContainer {
   background-color: rgba(250, 174, 39, 1);
   position: absolute;
   margin-top: 500px;
   border-radius: 5px;
   padding: 25px 35px 15px 35px;
-}
-
-#results {
-  font-size: 4rem;
-  color: orange;
 }
 
 /* ---- style PAGE 3 RESULTS - footer ----  */
