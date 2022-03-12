@@ -195,10 +195,10 @@ img {
 .headsDisplay {
   display: flex;
   /* flex-direction: column; */
-  float: right;
+  width: 100vw;
+  justify-content: space-evenly;
   font-size: 1.7rem;
   margin-top: 1rem;
-  margin-right: 2rem;
   /* background-color: red; */
 }
 
@@ -210,7 +210,25 @@ img {
 
 .headsDisplayText {
   margin-right: 1rem;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
+}
+
+#progressBar {
+  width: 15rem;
+  height: 2.5rem;
+  border: 0.3rem solid rgba(250, 174, 39, 255);
+  /* background-color: blue; */
+}
+
+#progressText {
+  color: white;
+}
+
+/* starts filling 0% and javascript will change the widht to increase the bar */
+#progressBarFull {
+  height: 2rem;
+  background-color: rgba(250, 174, 39, 255);
+  width: 0%;
 }
 
 /* ---- style PAGE 2 QUIZ - main ----  */

@@ -45,7 +45,10 @@ const sentenceNum = document.getElementById('sentenceNumber');
 const choicePhoto = Array.from(document.getElementsByClassName('choicePhoto'));
 const choiceName = Array.from(document.getElementsByClassName('choiceName'));
 const choiceContainer = Array.from(document.getElementsByClassName('choiceContainer'));
-
+const progressText = document.getElementById('progressText');
+const progressBarFull = document.getElementById('progressBarFull');
+const scoreText = document.getElementById('scoreText');
+const usernameActive = document.getElementById('usernameActive');
 
 console.log(sentence)
 console.log(choicePhoto)
@@ -66,9 +69,9 @@ let questions = [
         choicePhoto1: "./imgs/photos/jack-rounded.png",
         choiceName1: "Jack Weatherly",
         choicePhoto2: "./imgs/photos/katharine-rounded.png",
-        choiceName2: "Katharine Darbishire",
+        choiceName2: "Katharine",
         choicePhoto3: "./imgs/photos/jonathan-rounded.png",
-        choiceName3: "Jonathan Plumridge",
+        choiceName3: "Jonathan",
         answer: 1
     },
     {
@@ -76,9 +79,9 @@ let questions = [
         choicePhoto1: "./imgs/photos/sarah-rounded.png",
         choiceName1: "Sarah D.",
         choicePhoto2: "./imgs/photos/valerio-rounded.png",
-        choiceName2: "Valerio Chang",
+        choiceName2: "Valerio",
         choicePhoto3: "./imgs/photos/jaanki-rounded.png",
-        choiceName3: "Jaanki Vaghela",
+        choiceName3: "Jaanki",
         answer: 2
     },
     {
@@ -88,15 +91,25 @@ let questions = [
         choicePhoto2: "./imgs/photos/matt-j-rounded.png",
         choiceName2: "Matt J.",
         choicePhoto3: "./imgs/photos/richard-o-rounded.png",
-        choiceName3: "Richard Owen",
+        choiceName3: "Richard O.",
         answer: 3
+    },
+    {
+        sentence: `"Qualified Expedition Leader in Amazon Rainforest 😎 (although it is expired now)"`,
+        choicePhoto1: "./imgs/photos/Benny-Mansfield-rounded.png",
+        choiceName1: "Benny M.",
+        choicePhoto2: "./imgs/photos/matt-rounded.png",
+        choiceName2: "Matt D.",
+        choicePhoto3: "./imgs/photos/aimee-rounded.png",
+        choiceName3: "Aimee",
+        answer: 1
     },
 ];
 
 const CORRECT_POINTS = 10;
 // only doing this if I have many questions
 // and only want to use a few per game
-// const MAX_QUESTIONS = 3;
+// const MAX_QUESTIONS = 10;
 
 startGame = () => {
     questionCounter = 0;
@@ -117,6 +130,10 @@ getNewQuestion = () => {
         return window.location.assign("/results.html");
     }
     questionCounter++;
+    progressText.innerText = `Question ${questionCounter}/${questions.length}`;
+    // update progress bar
+    console.log(`${(questionCounter / questions.length) * 100}px;`)
+    progressBarFull.style.width = `${(questionCounter / questions.length) * 100}%`;
     // gets a random integer number between 0 and number of questions (length)
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     // assigns to currentquestion a random (questionIndex) availablequestion 
@@ -125,6 +142,9 @@ getNewQuestion = () => {
 
     // adds a number based on the questionCounter
     sentenceNum.innerText = `#${questionCounter}`;
+
+    // if I want max questions
+    // sentenceNum.innerText = `#${questionCounter}/${MAX_QUESTIONS}`;
 
     // for each choice choicePhoto, iterate through it, get a reference
     // each choice and inside it we get a number (from the data set property we set)
@@ -193,6 +213,11 @@ choiceContainer.forEach(choiceContainer => {
         if (selectedAnswer == currentQuestion.answer) {
             classToApply = 'correct';
         };
+
+        if (classToApply === 'correct') {
+            incrementScore(CORRECT_POINTS);
+        }
+
         // alternative method to write the same function
 //         const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 
@@ -208,10 +233,14 @@ choiceContainer.forEach(choiceContainer => {
             selectedChoice.parentElement.classList.remove(classToApply);
  // after I want to add an option to confirm before continue
         getNewQuestion();
-        }, 10000);
+        }, 1000);
     });
 });
 
-startGame()
+incrementScore = num => {
+    score +=num;
+    scoreText.innerText = score;
+    console.log(score)
+};
 
-// heads display - information about the game that we care. question we are at and 
+startGame();
