@@ -366,10 +366,16 @@ img {
   justify-content: space-around;
   align-items: center;
   margin-bottom: 2rem;
+  /* background-color: red; */
 }
 
 .resultsText {
   font-size: 2rem;
+}
+
+#usernameResults {
+  color: #222e54;
+  font-size: 2.5rem;
 }
 
 #btnViewAnswers {

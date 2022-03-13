@@ -109,16 +109,16 @@ let questions = [
         choiceName3: "Jonathan",
         answer: 1
     },
-    // {
-    //     sentence: `"The “most royal” person that was in touching distance of me was Queen Beatrix of the Netherlands."`,
-    //     choicePhoto1: "./imgs/photos/sarah-rounded.png",
-    //     choiceName1: "Sarah D.",
-    //     choicePhoto2: "./imgs/photos/valerio-rounded.png",
-    //     choiceName2: "Valerio",
-    //     choicePhoto3: "./imgs/photos/jaanki-rounded.png",
-    //     choiceName3: "Jaanki",
-    //     answer: 2
-    // },
+    {
+         sentence: `"The “most royal” person that was in touching distance of me was Queen Beatrix of the Netherlands."`,
+         choicePhoto1: "./imgs/photos/sarah-rounded.png",
+         choiceName1: "Sarah D.",
+         choicePhoto2: "./imgs/photos/valerio-rounded.png",
+         choiceName2: "Valerio",
+         choicePhoto3: "./imgs/photos/jaanki-rounded.png",
+         choiceName3: "Jaanki",
+         answer: 2
+    },
     // {
     //     sentence: `"I have performed a piano concerto at West Road Concert Hall in Cambridge."`,
     //     choicePhoto1: "./imgs/photos/Tom-A-rounded.png",
@@ -366,30 +366,22 @@ incrementScore = num => {
     score +=num;
     scoreText.innerText = score;
     console.log(score)
+
+            // // save score in localstorage
+            // sessionStorage.setItem("mostRecentScore", scoreText.innerText);
+            // console.log(sessionStorage.getItem("mostRecentScore"));
+            // e.preventDefault();
 };
 
 startGame();
 
 
-// ------- results page
 
-// save score
-// const usernameResults
 
-// console.log(document.getElementById('saveScore'));
 
-// const btnSaveScore = document.getElementById('saveScore');
 
-// saveScoreFunc = (e) => {
-//     console.log("score saved")
-//     e.preventDefault();
-//     btnSaveScore.style.color = "red";
-// };
 
-// // adding Optional chaining so it doesn't fail when on next page
-// document.getElementById('saveScore')?.addEventListener('click', saveScoreFunc)
-
-// ---------------------- QUIZ PAGE
+// ---------------- results page
 // get username showing in quiz page
 let usernameResults = document.getElementById('usernameResults');
 
@@ -404,3 +396,35 @@ printFunc = () => {
   };
   
   printFunc();
+
+
+  console.log(scoreText)
+  // get username showing in quiz page
+let finalScore = document.getElementById('finalScore');
+
+// retrieve the score and showw
+//WAITING FOR VIDEO TO TEACH ME
+printFunc = () => {
+    // retrievedData = sessionStorage.getItem("SessionUsername");
+    // retrievedData = JSON.parse(retrievedData);
+    // console.log(retrievedData.username);
+
+    // finalScore.innerHTML = scoreText.innerHTML; 
+  };
+  
+  printFunc();
+
+// save score and information in the form
+usernameResults
+finalScore
+
+const btnSaveScore = document.getElementById('saveScore');
+
+saveScoreFunc = (e) => {
+    console.log("score saved")
+    e.preventDefault();
+    btnSaveScore.style.color = "red";
+};
+
+// adding Optional chaining so it doesn't fail when on next page
+document.getElementById('saveScore')?.addEventListener('click', saveScoreFunc)
