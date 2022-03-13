@@ -55,7 +55,24 @@ startEnabled = () => {
 document.getElementById('btnSubmit')?.addEventListener('click', startEnabled)
 
 
-// quiz page
+// ---------------------- QUIZ PAGE
+// get username showing in quiz page
+let activeUser = document.getElementById('usernameActive');
+let retrievedData, tableData;
+
+// retrieve the value username of the data stored and use it
+// to change the innetHTML of the player
+printFunc = () => {
+    retrievedData = sessionStorage.getItem("SessionUsername");
+    retrievedData = JSON.parse(retrievedData);
+    console.log(retrievedData.username);
+
+    if (activeUser) activeUser.innerHTML = retrievedData.username;  
+  };
+  
+  printFunc();
+
+// questions and game
 console.log(document.getElementById('sentenceQuote'))
 
 const sentence = document.getElementById('sentenceQuote');
@@ -92,126 +109,126 @@ let questions = [
         choiceName3: "Jonathan",
         answer: 1
     },
-    {
-        sentence: `"The “most royal” person that was in touching distance of me was Queen Beatrix of the Netherlands."`,
-        choicePhoto1: "./imgs/photos/sarah-rounded.png",
-        choiceName1: "Sarah D.",
-        choicePhoto2: "./imgs/photos/valerio-rounded.png",
-        choiceName2: "Valerio",
-        choicePhoto3: "./imgs/photos/jaanki-rounded.png",
-        choiceName3: "Jaanki",
-        answer: 2
-    },
-    {
-        sentence: `"I have performed a piano concerto at West Road Concert Hall in Cambridge."`,
-        choicePhoto1: "./imgs/photos/Tom-A-rounded.png",
-        choiceName1: "Tom A.",
-        choicePhoto2: "./imgs/photos/matt-j-rounded.png",
-        choiceName2: "Matt J.",
-        choicePhoto3: "./imgs/photos/richard-o-rounded.png",
-        choiceName3: "Richard O.",
-        answer: 3
-    },
-    {
-        sentence: `"I am a qualified Expedition Leader in Amazon Rainforest 😎 (it is expired now)"`,
-        choicePhoto1: "./imgs/photos/Benny-Mansfield-rounded.png",
-        choiceName1: "Benny",
-        choicePhoto2: "./imgs/photos/matt-rounded.png",
-        choiceName2: "Matt D.",
-        choicePhoto3: "./imgs/photos/aimee-rounded.png",
-        choiceName3: "Aimee",
-        answer: 1
-    },
-    {
-        sentence: `"I once piloted a Royal Navy Frigate along the Essex and Suffolk coast."`,
-        choicePhoto1: "./imgs/photos/hannah-rounded.png",
-        choiceName1: "Hannah",
-        choicePhoto2: "./imgs/photos/ian-e-rounded.png",
-        choiceName2: "Ian E.",
-        choicePhoto3: "./imgs/photos/james-p-rounded.png",
-        choiceName3: "James",
-        answer: 2
-    },
-    {
-        sentence: `"I went on a blind date and have an article on The Guardian about it. Hint: My hair grew a lot since."`,
-        choicePhoto1: "./imgs/photos/toby-rounded.png",
-        choiceName1: "Toby",
-        choicePhoto2: "./imgs/photos/Joe-s-rounded.png",
-        choiceName2: "Joe S.",
-        choicePhoto3: "./imgs/photos/jaime-rounded.png",
-        choiceName3: "Jaime",
-        answer: 3
-    },
-    {
-        sentence: `"My Dads ex Wife's New Husband's Dog was Pickles, the dog who found the world cup."`,
-        choicePhoto1: "./imgs/photos/ben-rounded.png",
-        choiceName1: "Ben T.",
-        choicePhoto2: "./imgs/photos/thomas-giffin-round.png",
-        choiceName2: "Thomas G.",
-        choicePhoto3: "./imgs/photos/dan-y-rounded.png",
-        choiceName3: "Dan Y.",
-        answer: 1
-    },
-    {
-        sentence: `"I've played both Macduff in Macbeth and Tracy in Hairspray on stage."`,
-        choicePhoto1: "./imgs/photos/nicole-rounded (1).png",
-        choiceName1: "Nicole F.",
-        choicePhoto2: "./imgs/photos/valerie-rounded.png",
-        choiceName2: "Valerie",
-        choicePhoto3: "./imgs/photos/sian-rounded.png",
-        choiceName3: "Sian",
-        answer: 2
-    },
-    {
-        sentence: `"I lived for nearly an year in the Dominican Republic during and because of the pandemic,... also I come back married."`,
-        choicePhoto1: "./imgs/photos/spencer-rounded.png",
-        choiceName1: "Spencer",
-        choicePhoto2: "./imgs/photos/nicola-sd-rounded.png",
-        choiceName2: "Nicola",
-        choicePhoto3: "./imgs/photos/maria-rounded.png",
-        choiceName3: "Maria",
-        answer: 3
-    },
-    {
-        sentence: `"I have lived in different 5 countries"`,
-        choicePhoto1: "./imgs/photos/ben-s-rounded.png",
-        choiceName1: "Ben S.",
-        choicePhoto2: "./imgs/photos/tatsiana-rounded.png",
-        choiceName2: "Tatsiana",
-        choicePhoto3: "./imgs/photos/maria-rounded.png",
-        choiceName3: "Maria",
-        answer: 1
-    },
-    {
-        sentence: `"I can juggle 5 balls 🤹"`,
-        choicePhoto1: "./imgs/photos/ryan-rounded.png",
-        choiceName1: "Ryan",
-        choicePhoto2: "./imgs/photos/gwilym-rounded.png",
-        choiceName2: "Gwilym",
-        choicePhoto3: "./imgs/photos/kevin-rounded.png",
-        choiceName3: "Kevin",
-        answer: 2
-    },
-    {
-        sentence: `"I once passed out in a full Pudsey Bear costume at an official event celebrating Children in Need..."`,
-        choicePhoto1: "./imgs/photos/meg-rounded.png",
-        choiceName1: "Meg",
-        choicePhoto2: "./imgs/photos/stephen-rounded.png",
-        choiceName2: "Stephen C.",
-        choicePhoto3: "./imgs/photos/holly-w-rounded.png",
-        choiceName3: "Holly W.",
-        answer: 3
-    },
-    {
-        sentence: `"I once had dinner with George Clooney."`,
-        choicePhoto1: "./imgs/photos/Luke-h-rounded.png",
-        choiceName1: "Luke H.",
-        choicePhoto2: "./imgs/photos/ben-r-rounded.png",
-        choiceName2: "Ben R.",
-        choicePhoto3: "./imgs/photos/casey-rounded.png",
-        choiceName3: "Casey",
-        answer: 1
-    },
+    // {
+    //     sentence: `"The “most royal” person that was in touching distance of me was Queen Beatrix of the Netherlands."`,
+    //     choicePhoto1: "./imgs/photos/sarah-rounded.png",
+    //     choiceName1: "Sarah D.",
+    //     choicePhoto2: "./imgs/photos/valerio-rounded.png",
+    //     choiceName2: "Valerio",
+    //     choicePhoto3: "./imgs/photos/jaanki-rounded.png",
+    //     choiceName3: "Jaanki",
+    //     answer: 2
+    // },
+    // {
+    //     sentence: `"I have performed a piano concerto at West Road Concert Hall in Cambridge."`,
+    //     choicePhoto1: "./imgs/photos/Tom-A-rounded.png",
+    //     choiceName1: "Tom A.",
+    //     choicePhoto2: "./imgs/photos/matt-j-rounded.png",
+    //     choiceName2: "Matt J.",
+    //     choicePhoto3: "./imgs/photos/richard-o-rounded.png",
+    //     choiceName3: "Richard O.",
+    //     answer: 3
+    // },
+    // {
+    //     sentence: `"I am a qualified Expedition Leader in Amazon Rainforest 😎 (it is expired now)"`,
+    //     choicePhoto1: "./imgs/photos/Benny-Mansfield-rounded.png",
+    //     choiceName1: "Benny",
+    //     choicePhoto2: "./imgs/photos/matt-rounded.png",
+    //     choiceName2: "Matt D.",
+    //     choicePhoto3: "./imgs/photos/aimee-rounded.png",
+    //     choiceName3: "Aimee",
+    //     answer: 1
+    // },
+    // {
+    //     sentence: `"I once piloted a Royal Navy Frigate along the Essex and Suffolk coast."`,
+    //     choicePhoto1: "./imgs/photos/hannah-rounded.png",
+    //     choiceName1: "Hannah",
+    //     choicePhoto2: "./imgs/photos/ian-e-rounded.png",
+    //     choiceName2: "Ian E.",
+    //     choicePhoto3: "./imgs/photos/james-p-rounded.png",
+    //     choiceName3: "James",
+    //     answer: 2
+    // },
+    // {
+    //     sentence: `"I went on a blind date and have an article on The Guardian about it. Hint: My hair grew a lot since."`,
+    //     choicePhoto1: "./imgs/photos/toby-rounded.png",
+    //     choiceName1: "Toby",
+    //     choicePhoto2: "./imgs/photos/Joe-s-rounded.png",
+    //     choiceName2: "Joe S.",
+    //     choicePhoto3: "./imgs/photos/jaime-rounded.png",
+    //     choiceName3: "Jaime",
+    //     answer: 3
+    // },
+    // {
+    //     sentence: `"My Dads ex Wife's New Husband's Dog was Pickles, the dog who found the world cup."`,
+    //     choicePhoto1: "./imgs/photos/ben-rounded.png",
+    //     choiceName1: "Ben T.",
+    //     choicePhoto2: "./imgs/photos/thomas-giffin-round.png",
+    //     choiceName2: "Thomas G.",
+    //     choicePhoto3: "./imgs/photos/dan-y-rounded.png",
+    //     choiceName3: "Dan Y.",
+    //     answer: 1
+    // },
+    // {
+    //     sentence: `"I've played both Macduff in Macbeth and Tracy in Hairspray on stage."`,
+    //     choicePhoto1: "./imgs/photos/nicole-rounded (1).png",
+    //     choiceName1: "Nicole F.",
+    //     choicePhoto2: "./imgs/photos/valerie-rounded.png",
+    //     choiceName2: "Valerie",
+    //     choicePhoto3: "./imgs/photos/sian-rounded.png",
+    //     choiceName3: "Sian",
+    //     answer: 2
+    // },
+    // {
+    //     sentence: `"I lived for nearly an year in the Dominican Republic during and because of the pandemic,... also I come back married."`,
+    //     choicePhoto1: "./imgs/photos/spencer-rounded.png",
+    //     choiceName1: "Spencer",
+    //     choicePhoto2: "./imgs/photos/nicola-sd-rounded.png",
+    //     choiceName2: "Nicola",
+    //     choicePhoto3: "./imgs/photos/maria-rounded.png",
+    //     choiceName3: "Maria",
+    //     answer: 3
+    // },
+    // {
+    //     sentence: `"I have lived in different 5 countries"`,
+    //     choicePhoto1: "./imgs/photos/ben-s-rounded.png",
+    //     choiceName1: "Ben S.",
+    //     choicePhoto2: "./imgs/photos/tatsiana-rounded.png",
+    //     choiceName2: "Tatsiana",
+    //     choicePhoto3: "./imgs/photos/maria-rounded.png",
+    //     choiceName3: "Maria",
+    //     answer: 1
+    // },
+    // {
+    //     sentence: `"I can juggle 5 balls 🤹"`,
+    //     choicePhoto1: "./imgs/photos/ryan-rounded.png",
+    //     choiceName1: "Ryan",
+    //     choicePhoto2: "./imgs/photos/gwilym-rounded.png",
+    //     choiceName2: "Gwilym",
+    //     choicePhoto3: "./imgs/photos/kevin-rounded.png",
+    //     choiceName3: "Kevin",
+    //     answer: 2
+    // },
+    // {
+    //     sentence: `"I once passed out in a full Pudsey Bear costume at an official event celebrating Children in Need..."`,
+    //     choicePhoto1: "./imgs/photos/meg-rounded.png",
+    //     choiceName1: "Meg",
+    //     choicePhoto2: "./imgs/photos/stephen-rounded.png",
+    //     choiceName2: "Stephen C.",
+    //     choicePhoto3: "./imgs/photos/holly-w-rounded.png",
+    //     choiceName3: "Holly W.",
+    //     answer: 3
+    // },
+    // {
+    //     sentence: `"I once had dinner with George Clooney."`,
+    //     choicePhoto1: "./imgs/photos/Luke-h-rounded.png",
+    //     choiceName1: "Luke H.",
+    //     choicePhoto2: "./imgs/photos/ben-r-rounded.png",
+    //     choiceName2: "Ben R.",
+    //     choicePhoto3: "./imgs/photos/casey-rounded.png",
+    //     choiceName3: "Casey",
+    //     answer: 1
+    // },
 ];
 
 const CORRECT_POINTS = 10;
@@ -238,18 +255,18 @@ getNewQuestion = () => {
         return window.location.assign("/results.html");
     }
     questionCounter++;
-    progressText.innerText = `Question ${questionCounter}/${questions.length}`;
+    if (progressText) progressText.innerText = `Question ${questionCounter}/${questions.length}`;
     // update progress bar
     console.log(`${(questionCounter / questions.length) * 100}px;`)
-    progressBarFull.style.width = `${(questionCounter / questions.length) * 100}%`;
+    if (progressBarFull) progressBarFull.style.width = `${(questionCounter / questions.length) * 100}%`;
     // gets a random integer number between 0 and number of questions (length)
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     // assigns to currentquestion a random (questionIndex) availablequestion 
     currentQuestion = availableQuestions[questionIndex];
-    sentence.innerText = currentQuestion.sentence;
+    if (sentence) sentence.innerText = currentQuestion.sentence;
 
     // adds a number based on the questionCounter
-    sentenceNum.innerText = `#${questionCounter}`;
+    if (sentenceNum) sentenceNum.innerText = `#${questionCounter}`;
 
     // if I want max questions
     // sentenceNum.innerText = `#${questionCounter}/${MAX_QUESTIONS}`;
@@ -371,3 +388,19 @@ startGame();
 
 // // adding Optional chaining so it doesn't fail when on next page
 // document.getElementById('saveScore')?.addEventListener('click', saveScoreFunc)
+
+// ---------------------- QUIZ PAGE
+// get username showing in quiz page
+let usernameResults = document.getElementById('usernameResults');
+
+// retrieve the value username of the data stored and use it
+// to change the innetHTML of the username
+printFunc = () => {
+    retrievedData = sessionStorage.getItem("SessionUsername");
+    retrievedData = JSON.parse(retrievedData);
+    console.log(retrievedData.username);
+
+    usernameResults.innerHTML = retrievedData.username; 
+  };
+  
+  printFunc();
