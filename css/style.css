@@ -140,8 +140,11 @@ img {
 }
 
 #btnStart {
-  width: 10rem;
   background-color: rgba(34, 46, 84, 255);
+  display: none;
+  font-size: 1.5rem;
+  width: 100%;
+  border: none;
 }
 
 #btnClose {
@@ -382,7 +385,7 @@ img {
 }
 
 #playAgain,
-#save {
+#saveScore {
   font-size: 11px;
   width: 6.5rem;
   height: 3rem;

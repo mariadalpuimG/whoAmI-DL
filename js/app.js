@@ -1,4 +1,4 @@
-// // open and close rules buttons in main page
+// open and close rules buttons in main page
 console.log(document.getElementById('playBox'));
 
 const btnOpenClose = document.getElementById('playBox');
@@ -15,26 +15,44 @@ closeBox = () => {
 document.getElementById('btnPlay')?.addEventListener('click', openBox)
 document.getElementById('btnClose')?.addEventListener('click', closeBox)
 
-
-//start only available when submit
+// ask for username and store in local storage
 let storedUsername;
+// select a username and console log it
 submitUsername = (e) => {
     storedUsername = {
     username: document.querySelector("#username").value,
   };
 
   console.log(storedUsername);
-
+// store the selected username in local storage
   storedUsername = JSON.stringify(storedUsername);
   //Set the value of the specified local storage item
   sessionStorage.setItem("SessionUsername", storedUsername);
   console.log(sessionStorage.getItem("SessionUsername"));
-  e.preventDefault();
+   e.preventDefault();
 };
 
-document.querySelector("form")?.addEventListener("submit", submitUsername);
+document.querySelector("#usernameForm")?.addEventListener("submit", submitUsername);
 
+// submit only available if anything is written
+const username = document.getElementById('username');
+const submitUsernameBtn = document.getElementById('btnSubmit');
 
+submitEnabled = () => {
+console.log(username.value)
+    submitUsernameBtn.disabled = !username.value;
+};
+
+document.getElementById('username')?.addEventListener('keyup', submitEnabled)
+
+// start is only enabled when it's submitted
+const start = document.getElementById('btnStart');
+
+startEnabled = () => {
+    start.style.display = "block";
+};
+
+document.getElementById('btnSubmit')?.addEventListener('click', startEnabled)
 
 
 // quiz page
@@ -338,3 +356,18 @@ startGame();
 
 // ------- results page
 
+// save score
+// const usernameResults
+
+// console.log(document.getElementById('saveScore'));
+
+// const btnSaveScore = document.getElementById('saveScore');
+
+// saveScoreFunc = (e) => {
+//     console.log("score saved")
+//     e.preventDefault();
+//     btnSaveScore.style.color = "red";
+// };
+
+// // adding Optional chaining so it doesn't fail when on next page
+// document.getElementById('saveScore')?.addEventListener('click', saveScoreFunc)

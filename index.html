@@ -21,13 +21,13 @@
             <a href="#" class="btn" id="btnPlay">PLAY</a>  
         </div>
         <div class="startBoxContainer" id="playBox">
-            <form class="startFlexContainer">
+            <form class="startFlexContainer" id="usernameForm">
                 <input required class="inputUsername" type="text" name="username" id="username" placeholder="choose a username">
-                <button class="btn" id="btnSubmit">SUBMIT</button>
-                <a id="btnStart" class="btn" href="./quiz.html">START</a>
-
-                <!-- <a class="btn" href="html/quiz.html">SCORES</a> -->
+                <button class="btn" id="btnSubmit" disabled>SUBMIT</button>
+                <!-- <a id="btnStart" class="btn" href="./quiz.html" disabled>START</a> -->
+                <!-- check if I can have just one button -->
             </form>
+            <a id="btnStart" class="btn" href="./quiz.html">START</a>
             <div>
                 <button class="btn" id="btnClose">X</button>
             </div>
