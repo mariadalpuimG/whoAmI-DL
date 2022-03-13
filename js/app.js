@@ -119,16 +119,16 @@ let questions = [
          choiceName3: "Jaanki",
          answer: 2
     },
-    // {
-    //     sentence: `"I have performed a piano concerto at West Road Concert Hall in Cambridge."`,
-    //     choicePhoto1: "./imgs/photos/Tom-A-rounded.png",
-    //     choiceName1: "Tom A.",
-    //     choicePhoto2: "./imgs/photos/matt-j-rounded.png",
-    //     choiceName2: "Matt J.",
-    //     choicePhoto3: "./imgs/photos/richard-o-rounded.png",
-    //     choiceName3: "Richard O.",
-    //     answer: 3
-    // },
+    {
+        sentence: `"I have performed a piano concerto at West Road Concert Hall in Cambridge."`,
+        choicePhoto1: "./imgs/photos/Tom-A-rounded.png",
+        choiceName1: "Tom A.",
+        choicePhoto2: "./imgs/photos/matt-j-rounded.png",
+        choiceName2: "Matt J.",
+        choicePhoto3: "./imgs/photos/richard-o-rounded.png",
+        choiceName3: "Richard O.",
+        answer: 3
+    },
     // {
     //     sentence: `"I am a qualified Expedition Leader in Amazon Rainforest 😎 (it is expired now)"`,
     //     choicePhoto1: "./imgs/photos/Benny-Mansfield-rounded.png",
@@ -347,6 +347,7 @@ choiceContainer.forEach(choiceContainer => {
         if (classToApply === 'correct') {
             incrementScore(CORRECT_POINTS);
         }
+        console.log(classToApply)
 
         // alternative method to write the same function
 //         const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
@@ -397,8 +398,7 @@ printFunc = () => {
   printFunc();
 
 
-  console.log(scoreText)
-  // get username showing in quiz page
+  // get score showing in quiz page
 let finalScore = document.getElementById('finalScore');
 let retrievedScore
 
@@ -410,6 +410,23 @@ printFunc = () => {
     console.log(retrievedScore);
 
     finalScore.innerHTML = `${retrievedScore} points`; 
+  };
+  
+  printFunc();
+
+
+    // get correct answers showing in quiz page
+let correctAnswers = document.getElementById('correctAnswers');
+let retrievedCorrectAnswers;
+
+// retrieve the number of correct answers and show
+printFunc = () => {
+    console.log(retrievedScore)
+    retrievedCorrectAnswers = (retrievedScore/10);
+    console.log(retrievedCorrectAnswers);
+
+console.log(questions.length)
+    correctAnswers.innerHTML = `${retrievedCorrectAnswers}/${questions.length} correct`; 
   };
   
   printFunc();
