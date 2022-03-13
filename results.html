@@ -8,24 +8,28 @@
     <title>Who am I? RESULTS</title>
 </head>
 <body class="bodyResultsPage">
-    <header class="headResultsPage">
-        <img class="llogoResultsPage" src="./imgs/logo2.png" alt="Gearset logo">
+    <header class="headerLandingPage headResultsPage">
+        <img class="logoLandingPage logoResultsPage" src="./imgs/logo2.png" alt="Gearset logo">
     </header>
     <main>
-    <div class="landingPageContainer landingPageResultsContainer">
-        <div class="gameTag gameTagResults">
-            <h1>Who am I?</h1>
+    <div class="landingPageResultsContainer">
+        <div class="gameTagResults">
+            <h2>Who am I?</h2>
             <h3>Gearset edition</h2> 
             <p class="dashBar">_</p>
-            <h2>RESULTS</h2> 
+            <h1>RESULTS</h1> 
         </div>
-        <div class="resultsContainer" id="playBox">
-            <form class="startFlexContainer">
-                <h1>Player username placeholder</h1>
-                <h1 id="finalScore">0</h1>
-
-            </form>
-            <a id="btnStart" class="btn" href="./index.html">PLAY AGAIN</a>
+        <div class="resultsContainer" id="resultsBox">
+            <div class="startFlexContainer">
+                <h2 class="resultsText" id"usernameResults">mariadalpuim</h2>
+                <h2 class="resultsText" id="finalScore">0 Points</h2>
+                <h2 class="resultsText" id="correctAnswers">5/10 correct</h2>
+                <a href="#" class="btnX" id="btnViewAnswers">view answers</a>  
+            </div>
+            <div class="flexButtons">
+                <button id="save" class="btn">SAVE</button>
+                <a id="playAgain" class="btn" href="./index.html">TRY AGAIN</a>
+            </div>    
         </div>
     </div>
     </main>

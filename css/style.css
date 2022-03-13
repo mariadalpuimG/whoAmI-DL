@@ -293,54 +293,137 @@ img {
 
 /* ----------- style PAGE 3 RESULTS -----------  */
 /* ---- style PAGE 3 RESULTS - header ----  */
+
 /* ---- style PAGE 3 RESULTS - main ----  */
-
-.gameTagResults {
-  background-color: red;
-}
-
 .landingPageResultsContainer {
-  /* width: 97vw;
-  height: 50vh;
+  width: 97vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-content: space-between;
   margin-right: auto;
-  margin-left: auto; */
-  background-color: white;
+  margin-left: auto;
+  /* background-color: white; */
 }
 
-.gameTag h1 {
-  font-size: 2.7rem;
-  padding-top: 60px;
+.gameTagResults {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-top: -25px; */
 }
 
-.gameTag p {
+/* results word */
+.gameTagResults h1 {
   font-size: 5rem;
-  margin-bottom: 5rem;
-  font-weight: bold;
-  color: rgba(250, 174, 39, 255);
+  padding-top: 10px;
 }
 
-.gameTag h2 {
-  font-size: 6rem;
+/* dash symbol _ */
+.gameTagResults p {
+  font-size: 5rem;
+  font-weight: bold;
+  /* have to make negative because _ adds too much on top */
+  margin-top: -35px;
+  color: rgba(250, 174, 39, 255);
+  /* background-color: red; */
+}
+
+.gameTagResults h2 {
+  font-size: 3rem;
   font-weight: bold;
 }
 
-.gameTag h3 {
-  font-size: 4rem;
-  margin-bottom: 5rem;
+.gameTagResults h3 {
+  font-size: 2rem;
   color: rgba(250, 174, 39, 255);
-  padding-bottom: 50px;
 }
 
 .resultsContainer {
+  background-color: rgba(250, 174, 39, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: space-between;
+  width: 70vw;
+  height: 40vh;
+  margin: 2rem;
+  border-radius: 5px;
+  padding: 25px 35px;
+}
+
+.startFlexContainer {
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.resultsText {
+  font-size: 2rem;
+}
+
+#btnViewAnswers {
+  font-size: 1.2rem;
+  color: #222e54;
+  background-color: none;
+}
+
+#btnViewAnswers:hover {
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: bolder;
+}
+
+#playAgain,
+#save {
+  font-size: 11px;
+  width: 6.5rem;
+  height: 3rem;
+  background-color: rgba(34, 46, 84, 255);
+  border: none;
+}
+
+#playAgain {
+  width: 9rem;
+}
+
+.flexButtons {
+  display: flex;
+}
+
+.flexButtons * {
+  margin: 2rem 2rem 0px 2rem;
+}
+
+/* .viewAnswers {
+  position: absolute;
+} */
+
+/* .viewAnswersContainer {
   background-color: rgba(250, 174, 39, 1);
   position: absolute;
   margin-top: 500px;
   border-radius: 5px;
   padding: 25px 35px 15px 35px;
-}
+} */
+
+/* #btnClose {
+  background-color: rgba(34, 46, 84, 255);
+  font-size: 0.8rem;
+  width: 2.5rem;
+  border: none;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+} */
 
 /* ---- style PAGE 3 RESULTS - footer ----  */
 
