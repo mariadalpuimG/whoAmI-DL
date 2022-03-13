@@ -58,7 +58,7 @@ document.getElementById('btnSubmit')?.addEventListener('click', startEnabled)
 // ---------------------- QUIZ PAGE
 // get username showing in quiz page
 let activeUser = document.getElementById('usernameActive');
-let retrievedData, tableData;
+let retrievedData;
 
 // retrieve the value username of the data stored and use it
 // to change the innetHTML of the player
@@ -252,6 +252,11 @@ getNewQuestion = () => {
     // if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS)
     // this if checks if there's still available questions
     if(availableQuestions.length === 0) {
+    // save score in localstorage
+    sessionStorage.setItem("mostRecentScore", scoreText.innerText);
+    console.log(sessionStorage.getItem("mostRecentScore"));
+    // e.preventDefault();
+
         return window.location.assign("/results.html");
     }
     questionCounter++;
@@ -375,12 +380,6 @@ incrementScore = num => {
 
 startGame();
 
-
-
-
-
-
-
 // ---------------- results page
 // get username showing in quiz page
 let usernameResults = document.getElementById('usernameResults');
@@ -401,15 +400,16 @@ printFunc = () => {
   console.log(scoreText)
   // get username showing in quiz page
 let finalScore = document.getElementById('finalScore');
+let retrievedScore
 
 // retrieve the score and showw
 //WAITING FOR VIDEO TO TEACH ME
 printFunc = () => {
-    // retrievedData = sessionStorage.getItem("SessionUsername");
-    // retrievedData = JSON.parse(retrievedData);
-    // console.log(retrievedData.username);
+    retrievedScore = sessionStorage.getItem("mostRecentScore");
+    retrievedScore = JSON.parse(retrievedScore);
+    console.log(retrievedScore);
 
-    // finalScore.innerHTML = scoreText.innerHTML; 
+    finalScore.innerHTML = `${retrievedScore} points`; 
   };
   
   printFunc();
