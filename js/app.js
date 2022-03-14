@@ -268,7 +268,7 @@ getNewQuestion = () => {
     console.log(sessionStorage.getItem("mostRecentScore"));
     // e.preventDefault();
 
-        return window.location.assign("/../results.html");
+        return window.location.assign("/whoAmI-DL/results.html");
     }
     questionCounter++;
     if (progressText) progressText.innerText = `Question ${questionCounter}/${questions.length}`;
