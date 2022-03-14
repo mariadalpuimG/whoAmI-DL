@@ -76,7 +76,7 @@ printFunc = () => {
 console.log(document.getElementById('sentenceQuote'))
 
 const sentence = document.getElementById('sentenceQuote');
-const sentenceNum = document.getElementById('sentenceNumber');
+// const sentenceNum = document.getElementById('sentenceNumber');
 const choicePhoto = Array.from(document.getElementsByClassName('choicePhoto'));
 const choiceName = Array.from(document.getElementsByClassName('choiceName'));
 const choiceContainer = Array.from(document.getElementsByClassName('choiceContainer'));
@@ -96,8 +96,19 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-// I want to replace this with a data file
-// check if the answer number is zero based
+// not working, looking at this later
+// start with empty arran of questions to then import them from json file
+// let questions = [];
+
+// fetch("/_data/questions-data.json")
+//     .then((res) => res.json())
+//     .then((data) => {
+//         console.log(data);
+//         questions = data;
+//         startGame();
+//     });
+
+
 let questions = [
     {
         sentence: `"I am not good at reading instructions."`,
@@ -270,8 +281,8 @@ getNewQuestion = () => {
     currentQuestion = availableQuestions[questionIndex];
     if (sentence) sentence.innerText = currentQuestion.sentence;
 
-    // adds a number based on the questionCounter
-    if (sentenceNum) sentenceNum.innerText = `#${questionCounter}`;
+    // adds a number based on the questionCounter - not needed for now as the count is in the bottom
+    // if (sentenceNum) sentenceNum.innerText = `#${questionCounter}`;
 
     // if I want max questions
     // sentenceNum.innerText = `#${questionCounter}/${MAX_QUESTIONS}`;
@@ -445,3 +456,20 @@ saveScoreFunc = (e) => {
 
 // adding Optional chaining so it doesn't fail when on next page
 document.getElementById('saveScore')?.addEventListener('click', saveScoreFunc)
+
+// open and close view answers in results page
+console.log(document.getElementById('answersBox'));
+
+const btnOpenCloseAnswers = document.getElementById('answersBox');
+
+openAnswersBox = () => {
+    btnOpenCloseAnswers.style.display = "block";
+};
+
+closeAnswersBox = () => {
+    btnOpenCloseAnswers.style.display = "none";
+};
+
+// adding Optional chaining so it doesn't fail when on next page
+document.getElementById('btnViewAnswers')?.addEventListener('click', openAnswersBox)
+document.getElementById('btnCloseAnswers')?.addEventListener('click', closeAnswersBox)
