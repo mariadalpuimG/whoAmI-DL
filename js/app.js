@@ -270,7 +270,7 @@ getNewQuestion = () => {
 
     showFinishBtn = () => {
         document.getElementById('btnFinish').style.display = "block";
-        document.getElementById('btnNext').style.display = "none";
+        // document.getElementById('btnNext').style.display = "none";
     };
     showFinishBtn();
 
@@ -278,9 +278,9 @@ getNewQuestion = () => {
         // return window.location.assign("./results.html");
     }
 
-    
-
+    if(availableQuestions.length !== 0) {
     questionCounter++;
+};
     if (progressText) progressText.innerText = `Question ${questionCounter}/${questions.length}`;
     // update progress bar
     console.log(`${(questionCounter / questions.length) * 100}px;`)
@@ -363,6 +363,7 @@ choiceContainer.forEach(choiceContainer => {
         let classToApply = 'incorrect';
         if (selectedAnswer == currentQuestion.answer) {
             classToApply = 'correct';
+            // document.getElementById('btnNext').style.display = "block";
         };
 
         if (classToApply === 'correct') {

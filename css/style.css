@@ -250,6 +250,13 @@ img {
   background-color: red;
 }
 
+#btnNext {
+  display: none;
+  width: 200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 #btnFinish {
   display: none;
   width: 200px;
