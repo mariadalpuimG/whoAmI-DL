@@ -268,8 +268,18 @@ getNewQuestion = () => {
     console.log(sessionStorage.getItem("mostRecentScore"));
     // e.preventDefault();
 
-        return window.location.assign("/whoAmI-DLresults.html");
+    showFinishBtn = () => {
+        document.getElementById('btnFinish').style.display = "block";
+        document.getElementById('btnNext').style.display = "none";
+    };
+    showFinishBtn();
+
+        // return window.location.assign("/whoAmI-DL/results.html");
+        // return window.location.assign("./results.html");
     }
+
+    
+
     questionCounter++;
     if (progressText) progressText.innerText = `Question ${questionCounter}/${questions.length}`;
     // update progress bar

@@ -250,7 +250,13 @@ img {
   background-color: red;
 }
 
-/* don't know where to place it yet. */
+#btnFinish {
+  display: none;
+  width: 200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .headsDisplay {
   display: flex;
   /* flex-direction: column; */
