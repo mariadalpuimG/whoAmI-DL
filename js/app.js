@@ -278,7 +278,7 @@ getNewQuestion = () => {
         // return window.location.assign("./results.html");
     }
 
-    if(availableQuestions.length !== 0) {
+    if(availableQuestions.length != 0) {
     questionCounter++;
 };
     if (progressText) progressText.innerText = `Question ${questionCounter}/${questions.length}`;
@@ -286,11 +286,31 @@ getNewQuestion = () => {
     console.log(`${(questionCounter / questions.length) * 100}px;`)
     if (progressBarFull) progressBarFull.style.width = `${(questionCounter / questions.length) * 100}%`;
     // gets a random integer number between 0 and number of questions (length)
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+    const questionIndex = 0;
+    // const questionIndex = availableQuestions.length;
     // assigns to currentquestion a random (questionIndex) availablequestion 
     currentQuestion = availableQuestions[questionIndex];
+    console.log(currentQuestion)
     if (sentence) sentence.innerText = currentQuestion.sentence;
 
+    // trying to add automatically the answers at the end at each interaction but not working
+    // let questionsToPrint = Array.from(document.getElementsByClassName('sentencesListText'));
+    // console.log(questionToPrint)
+    // // printNewQuestionInResultsgetNewQuestion = () => {
+    // //     document.getElementsByClassName('sentencesListText').innerText = currentQuestion.sentence;
+    // //     console.log(document.getElementsByClassName('sentencesListText').innerText)
+        
+    // // };
+
+    // // printNewQuestionInResultsgetNewQuestion();
+
+    // sentence.forEach(questionsToPrint => {
+    //     sessionStorage.setItem("storedQuestions", currentQuestion.sentence.innerText);
+    //     console.log(sessionStorage.getItem("storedQuestions"));
+    //     // document.getElementsByClassName('sentencesListText').innerText = currentQuestion.sentence;
+    //     questionsToPrint.innerText = currentQuestion.sentence;
+    // });
+    
     // adds a number based on the questionCounter - not needed for now as the count is in the bottom
     // if (sentenceNum) sentenceNum.innerText = `#${questionCounter}`;
 
@@ -484,3 +504,33 @@ closeAnswersBox = () => {
 // adding Optional chaining so it doesn't fail when on next page
 document.getElementById('btnViewAnswers')?.addEventListener('click', openAnswersBox)
 document.getElementById('btnCloseAnswers')?.addEventListener('click', closeAnswersBox)
+
+// change the content of the questions at the end
+const sentencesListText = document.getElementsByClassName('sentencesListText');
+const choiceNameList = document.getElementsByClassName('choiceNameList');
+const choicePhotoList = document.getElementsByClassName('choicePhotoList');
+
+printQuestionsInResults = () => {
+    const questionIndex = 0;
+    //pick all questions and put them in an array
+    availableQuestions = [...questions];
+    console.log(availableQuestions)
+    currentQuestion = availableQuestions[questionIndex];
+    sentencesListText[0].innerText = currentQuestion.sentence;
+    console.log(currentQuestion)
+    console.log(choiceNameList[0])
+    choiceNameList[0].innerText = currentQuestion.choiceName1;
+    choicePhotoList[0].src = currentQuestion.choicePhoto1;
+
+    // if (sentence) sentence.innerText = currentQuestion.sentence;
+};
+
+//add event listener when we click the page or so, if needed
+printQuestionsInResults();
+
+const numberName = choiceName.dataset['number'];
+        // for the choice we are at, replace it's text with the current choice number
+        // for that current question
+        choiceName.innerText = currentQuestion['choiceName' + numberName];
+    ;
+
