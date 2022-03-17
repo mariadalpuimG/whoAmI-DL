@@ -191,7 +191,7 @@ let questions = [
         answer: 2
     },
     {
-        sentence: `"I lived for nearly an year in the Dominican Republic during and because of the pandemic,... also I come back married."`,
+        sentence: `"I lived for nearly an year in the Dominican Republic because of the pandemic... and returned married."`,
         choicePhoto1: "./imgs/photos/spencer-rounded.png",
         choiceName1: "Spencer",
         choicePhoto2: "./imgs/photos/nicola-sd-rounded.png",
@@ -537,6 +537,15 @@ const choicePhotoList9 = document.getElementsByClassName('sentencePhoto9');
 const sentencesListText10 = document.getElementsByClassName('sentenceText10');
 const choiceNameList10 = document.getElementsByClassName('sentenceName10');
 const choicePhotoList10 = document.getElementsByClassName('sentencePhoto10');
+const sentencesListText11 = document.getElementsByClassName('sentenceText11');
+const choiceNameList11 = document.getElementsByClassName('sentenceName11');
+const choicePhotoList11 = document.getElementsByClassName('sentencePhoto11');
+const sentencesListText12 = document.getElementsByClassName('sentenceText12');
+const choiceNameList12 = document.getElementsByClassName('sentenceName12');
+const choicePhotoList12 = document.getElementsByClassName('sentencePhoto12');
+const sentencesListText13 = document.getElementsByClassName('sentenceText13');
+const choiceNameList13 = document.getElementsByClassName('sentenceName13');
+const choicePhotoList13 = document.getElementsByClassName('sentencePhoto13');
 
 printQuestionsInResults = () => {
     // const questionIndex = 0;
@@ -576,50 +585,56 @@ printQuestionsInResults = () => {
     question5 = listOfQuestions[4];
     console.log(listOfQuestions[4])
     sentencesListText5[0].innerText = question5.sentence;
-    choiceNameList5[0].innerText = question5.choiceName3;
-    choicePhotoList5[0].src = question5.choicePhoto3;
+    choiceNameList5[0].innerText = question5.choiceName2;
+    choicePhotoList5[0].src = question5.choicePhoto2;
     // --
     question6 = listOfQuestions[5];
     console.log(listOfQuestions[5])
-    sentencesListText5[0].innerText = question5.sentence;
-    choiceNameList5[0].innerText = question5.choiceName1;
-    choicePhotoList5[0].src = question5.choicePhoto1;
+    sentencesListText6[0].innerText = question6.sentence;
+    choiceNameList6[0].innerText = question6.choiceName3;
+    choicePhotoList6[0].src = question6.choicePhoto3;
     // --
     question7 = listOfQuestions[6];
     console.log(listOfQuestions[6])
     sentencesListText7[0].innerText = question7.sentence;
-    choiceNameList7[0].innerText = question7.choiceName2;
-    choicePhotoList7[0].src = question7.choicePhoto2;
+    choiceNameList7[0].innerText = question7.choiceName1;
+    choicePhotoList7[0].src = question7.choicePhoto1;
     // --
-    question3 = listOfQuestions[7];
+    question8 = listOfQuestions[7];
     console.log(listOfQuestions[7])
-    sentencesListText3[0].innerText = question3.sentence;
-    choiceNameList3[0].innerText = question3.choiceName3;
-    choicePhotoList3[0].src = question3.choicePhoto3;
+    sentencesListText8[0].innerText = question8.sentence;
+    choiceNameList8[0].innerText = question8.choiceName2;
+    choicePhotoList8[0].src = question8.choicePhoto2;
     // --
-    question3 = listOfQuestions[8];
+    question9 = listOfQuestions[8];
     console.log(listOfQuestions[8])
-    sentencesListText3[0].innerText = question3.sentence;
-    choiceNameList3[0].innerText = question3.choiceName3;
-    choicePhotoList3[0].src = question3.choicePhoto3;
+    sentencesListText9[0].innerText = question9.sentence;
+    choiceNameList9[0].innerText = question9.choiceName3;
+    choicePhotoList9[0].src = question9.choicePhoto3;
     // --
-    question3 = listOfQuestions[9];
+    question10 = listOfQuestions[9];
     console.log(listOfQuestions[9])
-    sentencesListText3[0].innerText = question3.sentence;
-    choiceNameList3[0].innerText = question3.choiceName3;
-    choicePhotoList3[0].src = question3.choicePhoto3;
+    sentencesListText10[0].innerText = question10.sentence;
+    choiceNameList10[0].innerText = question10.choiceName1;
+    choicePhotoList10[0].src = question10.choicePhoto1;
     // --
-    question3 = listOfQuestions[10];
+    question11 = listOfQuestions[10];
     console.log(listOfQuestions[10])
-    sentencesListText3[0].innerText = question3.sentence;
-    choiceNameList3[0].innerText = question3.choiceName3;
-    choicePhotoList3[0].src = question3.choicePhoto3;
+    sentencesListText11[0].innerText = question11.sentence;
+    choiceNameList11[0].innerText = question11.choiceName2;
+    choicePhotoList11[0].src = question11.choicePhoto2;
     // --
-    question3 = listOfQuestions[11];
+    question12 = listOfQuestions[11];
     console.log(listOfQuestions[11])
-    sentencesListText3[0].innerText = question3.sentence;
-    choiceNameList3[0].innerText = question3.choiceName3;
-    choicePhotoList3[0].src = question3.choicePhoto3;
+    sentencesListText12[0].innerText = question12.sentence;
+    choiceNameList12[0].innerText = question12.choiceName3;
+    choicePhotoList12[0].src = question12.choicePhoto3;
+    // --
+    question13 = listOfQuestions[12];
+    console.log(listOfQuestions[12])
+    sentencesListText13[0].innerText = question13.sentence;
+    choiceNameList13[0].innerText = question13.choiceName1;
+    choicePhotoList13[0].src = question13.choicePhoto1;
 
 
     // if (sentence) sentence.innerText = currentQuestion.sentence;
