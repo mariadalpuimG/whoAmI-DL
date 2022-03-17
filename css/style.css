@@ -253,10 +253,16 @@ img {
 }
 
 .correct {
+  width: 125px;
+  height: 128px;
+  border-radius: 10px;
   background-color: green;
 }
 
 .incorrect {
+  width: 125px;
+  height: 128px;
+  border-radius: 10px;
   background-color: red;
 }
 
@@ -520,6 +526,10 @@ img {
 
   .choicePhoto {
     width: 120px;
+  }
+
+  .choicePhoto:hover {
+    width: 125px;
   }
 
   .headsDisplayTitle {
