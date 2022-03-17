@@ -112,7 +112,7 @@ img {
 .startBoxContainer {
   background-color: rgba(250, 174, 39, 1);
   position: absolute;
-  margin-top: 500px;
+  margin-top: 60vh;
   border-radius: 5px;
   padding: 25px 35px 15px 35px;
 }
@@ -211,9 +211,11 @@ img {
 }
 
 #sentenceQuote {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-style: italic;
-  text-align: left;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
   color: rgba(250, 174, 39, 255);
 }
 
@@ -231,6 +233,14 @@ img {
 
 .questionTag p {
   color: rgba(250, 174, 39, 255);
+}
+
+.optionsContainer {
+  display: flex;
+  width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
 }
 
 .choiceContainer {
@@ -495,12 +505,34 @@ img {
 /* MOBILE FIRST APPROACH - DESKTOP BELLOW */
 /* ----------- defaults PAGE 1 LANDING -----------  */
 @media screen and (min-width: 801px) {
-  /* not sure if I want this in the layout */
-  /* body {
-    background-image: url(/imgs/background2-1080x1920.jpg);
-    background-size: 500px;
-    height: 100vh;
-    background-position: right top;
-    background-repeat: no-repeat;
-  } */
+  #sentenceQuote {
+    font-size: 4rem;
+  }
+
+  .optionsContainer {
+    display: flex;
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+  }
+
+  .choicePhoto {
+    width: 120px;
+  }
+
+  .headsDisplayTitle {
+    font-size: 2.5rem;
+  }
+
+  .headsDisplayText {
+    font-size: 3rem;
+  }
+
+  #progressBar {
+    width: 25rem;
+    height: 2.5rem;
+    border: 0.3rem solid rgba(250, 174, 39, 255);
+    /* background-color: blue; */
+  }
 }
