@@ -140,106 +140,106 @@ let questions = [
         choiceName3: "Richard O.",
         answer: 3
     },
-    // {
-    //     sentence: `"I am a qualified Expedition Leader in Amazon Rainforest 😎 (it is expired now)"`,
-    //     choicePhoto1: "./imgs/photos/Benny-Mansfield-rounded.png",
-    //     choiceName1: "Benny",
-    //     choicePhoto2: "./imgs/photos/matt-rounded.png",
-    //     choiceName2: "Matt D.",
-    //     choicePhoto3: "./imgs/photos/aimee-rounded.png",
-    //     choiceName3: "Aimee",
-    //     answer: 1
-    // },
-    // {
-    //     sentence: `"I once piloted a Royal Navy Frigate along the Essex and Suffolk coast."`,
-    //     choicePhoto1: "./imgs/photos/hannah-rounded.png",
-    //     choiceName1: "Hannah",
-    //     choicePhoto2: "./imgs/photos/ian-e-rounded.png",
-    //     choiceName2: "Ian E.",
-    //     choicePhoto3: "./imgs/photos/james-p-rounded.png",
-    //     choiceName3: "James",
-    //     answer: 2
-    // },
-    // {
-    //     sentence: `"I went on a blind date and have an article on The Guardian about it. Hint: My hair grew a lot since."`,
-    //     choicePhoto1: "./imgs/photos/toby-rounded.png",
-    //     choiceName1: "Toby",
-    //     choicePhoto2: "./imgs/photos/Joe-s-rounded.png",
-    //     choiceName2: "Joe S.",
-    //     choicePhoto3: "./imgs/photos/jaime-rounded.png",
-    //     choiceName3: "Jaime",
-    //     answer: 3
-    // },
-    // {
-    //     sentence: `"My Dads ex Wife's New Husband's Dog was Pickles, the dog who found the world cup."`,
-    //     choicePhoto1: "./imgs/photos/ben-rounded.png",
-    //     choiceName1: "Ben T.",
-    //     choicePhoto2: "./imgs/photos/thomas-giffin-round.png",
-    //     choiceName2: "Thomas G.",
-    //     choicePhoto3: "./imgs/photos/dan-y-rounded.png",
-    //     choiceName3: "Dan Y.",
-    //     answer: 1
-    // },
-    // {
-    //     sentence: `"I've played both Macduff in Macbeth and Tracy in Hairspray on stage."`,
-    //     choicePhoto1: "./imgs/photos/nicole-rounded (1).png",
-    //     choiceName1: "Nicole F.",
-    //     choicePhoto2: "./imgs/photos/valerie-rounded.png",
-    //     choiceName2: "Valerie",
-    //     choicePhoto3: "./imgs/photos/sian-rounded.png",
-    //     choiceName3: "Sian",
-    //     answer: 2
-    // },
-    // {
-    //     sentence: `"I lived for nearly an year in the Dominican Republic during and because of the pandemic,... also I come back married."`,
-    //     choicePhoto1: "./imgs/photos/spencer-rounded.png",
-    //     choiceName1: "Spencer",
-    //     choicePhoto2: "./imgs/photos/nicola-sd-rounded.png",
-    //     choiceName2: "Nicola",
-    //     choicePhoto3: "./imgs/photos/maria-rounded.png",
-    //     choiceName3: "Maria",
-    //     answer: 3
-    // },
-    // {
-    //     sentence: `"I have lived in different 5 countries"`,
-    //     choicePhoto1: "./imgs/photos/ben-s-rounded.png",
-    //     choiceName1: "Ben S.",
-    //     choicePhoto2: "./imgs/photos/tatsiana-rounded.png",
-    //     choiceName2: "Tatsiana",
-    //     choicePhoto3: "./imgs/photos/maria-rounded.png",
-    //     choiceName3: "Maria",
-    //     answer: 1
-    // },
-    // {
-    //     sentence: `"I can juggle 5 balls 🤹"`,
-    //     choicePhoto1: "./imgs/photos/ryan-rounded.png",
-    //     choiceName1: "Ryan",
-    //     choicePhoto2: "./imgs/photos/gwilym-rounded.png",
-    //     choiceName2: "Gwilym",
-    //     choicePhoto3: "./imgs/photos/kevin-rounded.png",
-    //     choiceName3: "Kevin",
-    //     answer: 2
-    // },
-    // {
-    //     sentence: `"I once passed out in a full Pudsey Bear costume at an official event celebrating Children in Need..."`,
-    //     choicePhoto1: "./imgs/photos/meg-rounded.png",
-    //     choiceName1: "Meg",
-    //     choicePhoto2: "./imgs/photos/stephen-rounded.png",
-    //     choiceName2: "Stephen C.",
-    //     choicePhoto3: "./imgs/photos/holly-w-rounded.png",
-    //     choiceName3: "Holly W.",
-    //     answer: 3
-    // },
-    // {
-    //     sentence: `"I once had dinner with George Clooney."`,
-    //     choicePhoto1: "./imgs/photos/Luke-h-rounded.png",
-    //     choiceName1: "Luke H.",
-    //     choicePhoto2: "./imgs/photos/ben-r-rounded.png",
-    //     choiceName2: "Ben R.",
-    //     choicePhoto3: "./imgs/photos/casey-rounded.png",
-    //     choiceName3: "Casey",
-    //     answer: 1
-    // },
+    {
+        sentence: `"I am a qualified Expedition Leader in Amazon Rainforest 😎 (it is expired now)"`,
+        choicePhoto1: "./imgs/photos/Benny-Mansfield-rounded.png",
+        choiceName1: "Benny",
+        choicePhoto2: "./imgs/photos/matt-rounded.png",
+        choiceName2: "Matt D.",
+        choicePhoto3: "./imgs/photos/aimee-rounded.png",
+        choiceName3: "Aimee",
+        answer: 1
+    },
+    {
+        sentence: `"I once piloted a Royal Navy Frigate along the Essex and Suffolk coast."`,
+        choicePhoto1: "./imgs/photos/hannah-rounded.png",
+        choiceName1: "Hannah",
+        choicePhoto2: "./imgs/photos/ian-e-rounded.png",
+        choiceName2: "Ian E.",
+        choicePhoto3: "./imgs/photos/james-p-rounded.png",
+        choiceName3: "James",
+        answer: 2
+    },
+    {
+        sentence: `"I went on a blind date and have an article on The Guardian about it. Hint: My hair grew a lot since."`,
+        choicePhoto1: "./imgs/photos/toby-rounded.png",
+        choiceName1: "Toby",
+        choicePhoto2: "./imgs/photos/Joe-s-rounded.png",
+        choiceName2: "Joe S.",
+        choicePhoto3: "./imgs/photos/jaime-rounded.png",
+        choiceName3: "Jaime",
+        answer: 3
+    },
+    {
+        sentence: `"My Dads ex Wife's New Husband's Dog was Pickles, the dog who found the world cup."`,
+        choicePhoto1: "./imgs/photos/ben-rounded.png",
+        choiceName1: "Ben T.",
+        choicePhoto2: "./imgs/photos/thomas-giffin-round.png",
+        choiceName2: "Thomas G.",
+        choicePhoto3: "./imgs/photos/dan-y-rounded.png",
+        choiceName3: "Dan Y.",
+        answer: 1
+    },
+    {
+        sentence: `"I've played both Macduff in Macbeth and Tracy in Hairspray on stage."`,
+        choicePhoto1: "./imgs/photos/nicole-rounded (1).png",
+        choiceName1: "Nicole F.",
+        choicePhoto2: "./imgs/photos/valerie-rounded.png",
+        choiceName2: "Valerie",
+        choicePhoto3: "./imgs/photos/sian-rounded.png",
+        choiceName3: "Sian",
+        answer: 2
+    },
+    {
+        sentence: `"I lived for nearly an year in the Dominican Republic during and because of the pandemic,... also I come back married."`,
+        choicePhoto1: "./imgs/photos/spencer-rounded.png",
+        choiceName1: "Spencer",
+        choicePhoto2: "./imgs/photos/nicola-sd-rounded.png",
+        choiceName2: "Nicola",
+        choicePhoto3: "./imgs/photos/maria-rounded.png",
+        choiceName3: "Maria",
+        answer: 3
+    },
+    {
+        sentence: `"I have lived in different 5 countries"`,
+        choicePhoto1: "./imgs/photos/ben-s-rounded.png",
+        choiceName1: "Ben S.",
+        choicePhoto2: "./imgs/photos/tatsiana-rounded.png",
+        choiceName2: "Tatsiana",
+        choicePhoto3: "./imgs/photos/maria-rounded.png",
+        choiceName3: "Maria",
+        answer: 1
+    },
+    {
+        sentence: `"I can juggle 5 balls 🤹"`,
+        choicePhoto1: "./imgs/photos/ryan-rounded.png",
+        choiceName1: "Ryan",
+        choicePhoto2: "./imgs/photos/gwilym-rounded.png",
+        choiceName2: "Gwilym",
+        choicePhoto3: "./imgs/photos/kevin-rounded.png",
+        choiceName3: "Kevin",
+        answer: 2
+    },
+    {
+        sentence: `"I once passed out in a full Pudsey Bear costume at an official event celebrating Children in Need..."`,
+        choicePhoto1: "./imgs/photos/meg-rounded.png",
+        choiceName1: "Meg",
+        choicePhoto2: "./imgs/photos/stephen-rounded.png",
+        choiceName2: "Stephen C.",
+        choicePhoto3: "./imgs/photos/holly-w-rounded.png",
+        choiceName3: "Holly W.",
+        answer: 3
+    },
+    {
+        sentence: `"I once had dinner with George Clooney."`,
+        choicePhoto1: "./imgs/photos/Luke-h-rounded.png",
+        choiceName1: "Luke H.",
+        choicePhoto2: "./imgs/photos/ben-r-rounded.png",
+        choiceName2: "Ben R.",
+        choicePhoto3: "./imgs/photos/casey-rounded.png",
+        choiceName3: "Casey",
+        answer: 1
+    },
 ];
 
 const CORRECT_POINTS = 10;
@@ -506,31 +506,124 @@ document.getElementById('btnViewAnswers')?.addEventListener('click', openAnswers
 document.getElementById('btnCloseAnswers')?.addEventListener('click', closeAnswersBox)
 
 // change the content of the questions at the end
-const sentencesListText = document.getElementsByClassName('sentencesListText');
-const choiceNameList = document.getElementsByClassName('choiceNameList');
-const choicePhotoList = document.getElementsByClassName('choicePhotoList');
+// I will need to write a much better code for this function, but later
+const sentencesListText1 = document.getElementsByClassName('sentenceText1');
+const choiceNameList1 = document.getElementsByClassName('sentenceName1');
+const choicePhotoList1 = document.getElementsByClassName('sentencePhoto1');
+const sentencesListText2 = document.getElementsByClassName('sentenceText2');
+const choiceNameList2 = document.getElementsByClassName('sentenceName2');
+const choicePhotoList2 = document.getElementsByClassName('sentencePhoto2');
+const sentencesListText3 = document.getElementsByClassName('sentenceText3');
+const choiceNameList3 = document.getElementsByClassName('sentenceName3');
+const choicePhotoList3 = document.getElementsByClassName('sentencePhoto3');
+const sentencesListText4 = document.getElementsByClassName('sentenceText4');
+const choiceNameList4 = document.getElementsByClassName('sentenceName4');
+const choicePhotoList4 = document.getElementsByClassName('sentencePhoto4');
+const sentencesListText5 = document.getElementsByClassName('sentenceText5');
+const choiceNameList5 = document.getElementsByClassName('sentenceName5');
+const choicePhotoList5 = document.getElementsByClassName('sentencePhoto5');
+const sentencesListText6 = document.getElementsByClassName('sentenceText6');
+const choiceNameList6 = document.getElementsByClassName('sentenceName6');
+const choicePhotoList6 = document.getElementsByClassName('sentencePhoto6');
+const sentencesListText7 = document.getElementsByClassName('sentenceText7');
+const choiceNameList7 = document.getElementsByClassName('sentenceName7');
+const choicePhotoList7 = document.getElementsByClassName('sentencePhoto7');
+const sentencesListText8 = document.getElementsByClassName('sentenceText8');
+const choiceNameList8 = document.getElementsByClassName('sentenceName8');
+const choicePhotoList8 = document.getElementsByClassName('sentencePhoto8');
+const sentencesListText9 = document.getElementsByClassName('sentenceText9');
+const choiceNameList9 = document.getElementsByClassName('sentenceName9');
+const choicePhotoList9 = document.getElementsByClassName('sentencePhoto9');
+const sentencesListText10 = document.getElementsByClassName('sentenceText10');
+const choiceNameList10 = document.getElementsByClassName('sentenceName10');
+const choicePhotoList10 = document.getElementsByClassName('sentencePhoto10');
 
 printQuestionsInResults = () => {
-    const questionIndex = 0;
+    // const questionIndex = 0;
     //pick all questions and put them in an array
-    availableQuestions = [...questions];
-    console.log(availableQuestions)
-    currentQuestion = availableQuestions[questionIndex];
-    sentencesListText[0].innerText = currentQuestion.sentence;
-    console.log(currentQuestion)
-    console.log(choiceNameList[0])
-    choiceNameList[0].innerText = currentQuestion.choiceName1;
-    choicePhotoList[0].src = currentQuestion.choicePhoto1;
+    listOfQuestions = [...questions];
+    console.log(listOfQuestions)
+    //--
+    question1 = listOfQuestions[0];
+    console.log(question1)
+    sentencesListText1[0].innerText = question1.sentence;
+    console.log(sentencesListText1[0].innerText)
+    console.log(question1)
+    console.log(choiceNameList1[0])
+    choiceNameList1[0].innerText = question1.choiceName1;
+    choicePhotoList1[0].src = question1.choicePhoto1;
+    // --
+    question2 = listOfQuestions[1];
+    console.log(listOfQuestions[1])
+    sentencesListText2[0].innerText = question2.sentence;
+    console.log(question2)
+    console.log(choiceNameList2[0])
+    choiceNameList2[0].innerText = question2.choiceName2;
+    choicePhotoList2[0].src = question2.choicePhoto2;
+    // --
+    question3 = listOfQuestions[2];
+    console.log(listOfQuestions[2])
+    sentencesListText3[0].innerText = question3.sentence;
+    choiceNameList3[0].innerText = question3.choiceName3;
+    choicePhotoList3[0].src = question3.choicePhoto3;
+    // --
+    question4 = listOfQuestions[3];
+    console.log(listOfQuestions[3])
+    sentencesListText4[0].innerText = question4.sentence;
+    choiceNameList4[0].innerText = question4.choiceName1;
+    choicePhotoList4[0].src = question4.choicePhoto1;
+    // --
+    question5 = listOfQuestions[4];
+    console.log(listOfQuestions[4])
+    sentencesListText5[0].innerText = question5.sentence;
+    choiceNameList5[0].innerText = question5.choiceName3;
+    choicePhotoList5[0].src = question5.choicePhoto3;
+    // --
+    question6 = listOfQuestions[5];
+    console.log(listOfQuestions[5])
+    sentencesListText5[0].innerText = question5.sentence;
+    choiceNameList5[0].innerText = question5.choiceName1;
+    choicePhotoList5[0].src = question5.choicePhoto1;
+    // --
+    question7 = listOfQuestions[6];
+    console.log(listOfQuestions[6])
+    sentencesListText7[0].innerText = question7.sentence;
+    choiceNameList7[0].innerText = question7.choiceName2;
+    choicePhotoList7[0].src = question7.choicePhoto2;
+    // --
+    question3 = listOfQuestions[7];
+    console.log(listOfQuestions[7])
+    sentencesListText3[0].innerText = question3.sentence;
+    choiceNameList3[0].innerText = question3.choiceName3;
+    choicePhotoList3[0].src = question3.choicePhoto3;
+    // --
+    question3 = listOfQuestions[8];
+    console.log(listOfQuestions[8])
+    sentencesListText3[0].innerText = question3.sentence;
+    choiceNameList3[0].innerText = question3.choiceName3;
+    choicePhotoList3[0].src = question3.choicePhoto3;
+    // --
+    question3 = listOfQuestions[9];
+    console.log(listOfQuestions[9])
+    sentencesListText3[0].innerText = question3.sentence;
+    choiceNameList3[0].innerText = question3.choiceName3;
+    choicePhotoList3[0].src = question3.choicePhoto3;
+    // --
+    question3 = listOfQuestions[10];
+    console.log(listOfQuestions[10])
+    sentencesListText3[0].innerText = question3.sentence;
+    choiceNameList3[0].innerText = question3.choiceName3;
+    choicePhotoList3[0].src = question3.choicePhoto3;
+    // --
+    question3 = listOfQuestions[11];
+    console.log(listOfQuestions[11])
+    sentencesListText3[0].innerText = question3.sentence;
+    choiceNameList3[0].innerText = question3.choiceName3;
+    choicePhotoList3[0].src = question3.choicePhoto3;
+
 
     // if (sentence) sentence.innerText = currentQuestion.sentence;
 };
 
 //add event listener when we click the page or so, if needed
 printQuestionsInResults();
-
-const numberName = choiceName.dataset['number'];
-        // for the choice we are at, replace it's text with the current choice number
-        // for that current question
-        choiceName.innerText = currentQuestion['choiceName' + numberName];
-    ;
-

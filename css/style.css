@@ -498,6 +498,7 @@ img {
 
 .viewAnswersContainer {
   display: none;
+  overflow-y: scroll;
 }
 
 /* ---- style PAGE 3 RESULTS - footer ----  */
