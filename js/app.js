@@ -204,10 +204,10 @@ let questions = [
         sentence: `"I have lived in different 5 countries"`,
         choicePhoto1: "./imgs/photos/ben-s-rounded.png",
         choiceName1: "Ben S.",
-        choicePhoto2: "./imgs/photos/tatsiana-rounded.png",
-        choiceName2: "Tatsiana",
-        choicePhoto3: "./imgs/photos/maria-rounded.png",
-        choiceName3: "Maria",
+        choicePhoto2: "./imgs/photos/fergus-rounded.png",
+        choiceName2: "Fergus",
+        choicePhoto3: "./imgs/photos/ana-rounded.png",
+        choiceName3: "Ana J.",
         answer: 1
     },
     {
