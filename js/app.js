@@ -240,6 +240,16 @@ let questions = [
         choiceName3: "Casey",
         answer: 1
     },
+    {
+        sentence: `"I'm a twin."`,
+        choicePhoto1: "./imgs/photos/antonio-rounded.png",
+        choiceName1: "Antonio",
+        choicePhoto2: "./imgs/photos/generic.png",
+        choiceName2: "Taylor V.",
+        choicePhoto3: "./imgs/photos/julian-rounded.png",
+        choiceName3: "Julian W.",
+        answer: 2
+    },
 ];
 
 const CORRECT_POINTS = 10;
@@ -546,6 +556,9 @@ const choicePhotoList12 = document.getElementsByClassName('sentencePhoto12');
 const sentencesListText13 = document.getElementsByClassName('sentenceText13');
 const choiceNameList13 = document.getElementsByClassName('sentenceName13');
 const choicePhotoList13 = document.getElementsByClassName('sentencePhoto13');
+const sentencesListText14 = document.getElementsByClassName('sentenceText14');
+const choiceNameList14 = document.getElementsByClassName('sentenceName14');
+const choicePhotoList14 = document.getElementsByClassName('sentencePhoto14');
 
 printQuestionsInResults = () => {
     // const questionIndex = 0;
@@ -635,6 +648,12 @@ printQuestionsInResults = () => {
     sentencesListText13[0].innerText = question13.sentence;
     choiceNameList13[0].innerText = question13.choiceName1;
     choicePhotoList13[0].src = question13.choicePhoto1;
+        // --
+    question14 = listOfQuestions[13];
+    console.log(listOfQuestions[13])
+    sentencesListText14[0].innerText = question14.sentence;
+    choiceNameList14[0].innerText = question14.choiceName2;
+    choicePhotoList14[0].src = question14.choicePhoto2;
 
 
     // if (sentence) sentence.innerText = currentQuestion.sentence;

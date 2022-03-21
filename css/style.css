@@ -221,14 +221,17 @@ img {
 
 /* not happy with this, check later */
 .questionTag {
-  align-self: flex-end;
-  margin-right: 2rem;
+  position: relative;
+  /* align-self: flex-end; */
+  margin-right: auto;
+  margin-left: auto;
+  /* margin-right: 6rem; */
   margin-top: -4rem;
 }
 
 .questionTag > * {
-  text-align: left;
-  font-size: 18px;
+  text-align: center;
+  font-size: 2.5rem;
 }
 
 .questionTag p {
