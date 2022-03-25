@@ -244,7 +244,7 @@ let questions = [
         sentence: `"I'm a twin."`,
         choicePhoto1: "./imgs/photos/antonio-rounded.png",
         choiceName1: "Antonio",
-        choicePhoto2: "./imgs/photos/generic.png",
+        choicePhoto2: "./imgs/photos/taylor-rounded.png",
         choiceName2: "Taylor V.",
         choicePhoto3: "./imgs/photos/julian-rounded.png",
         choiceName3: "Julian W.",
